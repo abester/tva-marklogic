@@ -1,0 +1,12 @@
+# Intellij files
+.idea
+.classpath
+.project
+*.iml
+.project
+.settings
+# java class files
+target
+.DS_Store
+# log files
+*.log

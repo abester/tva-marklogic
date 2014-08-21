@@ -1,0 +1,50 @@
+<series supplier_user="mitchc19" last_modified="2013-09-27T10:39:47Z" stated_items="13" revision="5" pid="p01crz36" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/" last_modified_supplier="pit">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/p/39502005"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/93079908</id>
+      <id type="crid" authority="pips">crid://bbc.co.uk/p/39502005</id>
+      <id type="pid" authority="pips">p01crz36</id>
+    </ids>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>Atlantis</title>
+    <synopses>
+      <synopsis length="short">A fantasy drama set in an ancient world of legendary heroes and mythical creatures.</synopsis>
+      <synopsis length="medium">A fantasy drama set in a world of legendary heroes and mythical creatures. Far from home, Jason washes up on the shores of the ancient and mysterious city of Atlantis.</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00035" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00035/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+        <genre genre_id="200032" type="iplayer_secondlevel">SciFi &amp; Fantasy</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <classifications/>
+    <stack end_index="13" start_index="1"/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/descendants/clips/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/siblings/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/rights_contracts/"/>
+    </links>
+  </series>
+

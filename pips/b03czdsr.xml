@@ -1,0 +1,61 @@
+<episode revision="2" pid="b03czdsr" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/" last_modified="2013-09-27T23:00:25Z" last_modified_supplier="rbm">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/96952213"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/96952213</id>
+      <id type="pid" authority="pips">b03czdsr</id>
+      <id type="uid" authority="onair">DRRB202X</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:series" index="2" pid="p01crz36" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p01crz36/"/>
+    </member_of>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>!!! Girl By Any Other Name</title>
+    <containers_title>Atlantis</containers_title>
+    <presentation_title>Episode 2</presentation_title>
+    <release_date month="10" day="5" year="2013"/>
+    <uri/>
+    <synopses>
+      <synopsis length="short">The heroes are entangled in the perilous rites of Dionysus with a stranger called Medusa.</synopsis>
+      <synopsis length="medium">Drama series. The heroes face a race against time and find themselves entangled in the perilous rites of Dionysus alongside a stranger called Medusa.</synopsis>
+      <synopsis length="long">Despite their newfound fame after slaying the Minotaur, the boys are still penniless and hungry. When an old man asks them to find his missing daughter, things seem on the up, but it soon becomes clear that their task will not be an easy one; she has been taken by the Maenads, fanatical worshippers of the god Dionysus. 
+
+With the hopes and life of the old man fading, it is a race against time that Jason cannot turn his back on. But just when their perilous task seems at an end, he comes face-to-face with a stranger named Medusa.</synopsis>
+    </synopses>
+    <languages>
+      <language>EN</language>
+    </languages>
+    <genres>
+      <genre_group genre_id="C00035" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00035/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+        <genre genre_id="200032" type="iplayer_secondlevel">SciFi &amp; Fantasy</genre>
+      </genre_group>
+    </genres>
+    
+    <classifications/>
+    <media_type value="audio_video"/>
+    <filename_template/>
+    <origination/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/descendants/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/siblings/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/children/clips/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/descendants/clips/"/>
+      <link rel="pips-meta:version-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/versions/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/rights_contracts/"/>
+    </links>
+  </episode>

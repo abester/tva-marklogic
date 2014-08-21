@@ -1,0 +1,51 @@
+ <version revision="1" pid="b03czdsn" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/" last_modified="2013-09-27T00:40:52Z" last_modified_supplier="rbm">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/96952210"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/96952210</id>
+      <id type="pid" authority="pips">b03czdsn</id>
+      <id type="uid" authority="onair">DRRB202X/01</id>
+    </ids>
+    <version_of>
+      <link rel="pips-meta:episode" pid="b03czdsr" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b03czdsr/"/>
+    </version_of>
+    <master_brand/>
+    <version_types>
+      <version_reason></version_reason>
+      <version_type revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/version_type/version_type_id.Original/" last_modified="2008-10-06T11:01:48Z" version_type_id="Original" last_modified_supplier="pips">Original version</version_type>
+    </version_types>
+    <languages>
+      <language>EN</language>
+    </languages>
+    <duration>00:45:00</duration>
+    <subtitles/>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <warnings/>
+    <competition_warning value="false"/>
+    <credits/>
+    <audio_visual_attributes>
+      <aspect_ratio>16:9</aspect_ratio>
+      <sound_format>Stereo</sound_format>
+      <colour>colour</colour>
+    </audio_visual_attributes>
+    <source_asset/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/broadcasts/"/>
+      <link rel="pips-meta:ondemand-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/ondemands/"/>
+      <link rel="pips-meta:media_asset-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/media_assets/"/>
+      <link rel="pips-meta:window-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/windows/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/siblings/"/>
+      <link rel="pips-meta:segment_event-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/segment_events/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/rights_contracts/"/>
+    </links>
+  </version>

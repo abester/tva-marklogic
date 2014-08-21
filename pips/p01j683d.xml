@@ -1,0 +1,36 @@
+ <ondemand revision="2" odm_managed="false" pid="p01j683d" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/" last_modified="2013-10-06T23:12:57Z" last_modified_supplier="mami">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <ids>
+      <id type="oid" authority="pips">b03czdsn.imi:bbc.co.uk/efa8cb4e04d746238df88bed319f981e</id>
+      <id type="pid" authority="pips">p01j683d</id>
+    </ids>
+    <broadcast_of>
+      <link rel="pips-meta:version" pid="b03czdsn" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b03czdsn/"/>
+    </broadcast_of>
+    <broadcaster>
+      <link rel="pips-meta:service" sid="pc_streaming_hd" href="https://api.live.bbc.co.uk/pips/api/v1/service/sid.pc_streaming_hd/"/>
+    </broadcaster>
+    <synopses/>
+    <time duration="00:42:50"/>
+    <availability actual_start="2013-10-05T09:50:54Z" start="2013-10-05T20:10:00Z" end="2014-01-04T20:09:00Z"/>
+    <payment_type/>
+    <playable/>
+    <subtitles/>
+    <filepath></filepath>
+    <filesize>757062537</filesize>
+    <territories>
+      <territory id="uk"/>
+    </territories>
+    <media_asset>
+      <link rel="pips-meta:media_asset" pid="p01j94q4" href="https://api.live.bbc.co.uk/pips/api/v1/media_asset/pid.p01j94q4/"/>
+    </media_asset>
+    <links>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/member_in/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/relationships/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/changes/"/>
+      <link rel="pips-meta:matching_abstract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/ondemand/pid.p01j683d/matching_abstracts/"/>
+    </links>
+  </ondemand>

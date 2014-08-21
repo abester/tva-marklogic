@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TVAMain xml:lang="nl" xmlns="urn:tva:metadata:2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mpeg7="urn:tva:mpeg7:2008">
+  <ProgramDescription>
+    <ProgramInformationTable>
+    
+      <ProgramInformation programId="crid://bbc.co.uk/b/28310411" xml:lang="en-GB" fragmentId="b00zn9b2" fragmentVersion="1342555500367551">
+        <BasicDescription>
+          <Title xml:lang="en-GB" type="main">Part 1</Title>
+          <ShortTitle xml:lang="en-GB" type="main" length="6">Part 1</ShortTitle>
+          <ShortTitle xml:lang="en-GB" type="secondary" length="6">Part 1</ShortTitle>
+          <Synopsis xml:lang="en-GB" length="short"> The team investigate the mystery of a missing banker to help his family find closure.</Synopsis>
+          <Synopsis xml:lang="en-GB" length="medium">Crime drama. Boyd has to break in a new team member of equal rank, and the team investigate the mystery of a missing banker to help his family find closure.</Synopsis>
+          <Synopsis xml:lang="en-GB" length="long">Boyd has to break in a new team member of equal rank, Detective Superintendent Sarah Cavendish, a high-flyer recently grounded by a hushed-up failed operation. The team investigate the mystery of a missing banker to help the man's seemingly-cursed family find closure.</Synopsis>
+          <Genre href="urn:bbc:metadata:cs:iPlayerFormatCS:2007:C00017" type="main" />
+          <Genre href="urn:bbc:metadata:cs:iPlayerFormatCS:2007:C00021" type="main" />
+          <Genre href="urn:bbc:metadata:cs:iPlayerFormatCS:2007:PT005" type="other" />
+          
+          <CreditsList>
+             <CreditsItem role="urn:mpeg:mpeg7:cs:RoleCS:2001:ACTOR">
+                <PersonName xml:lang="en-GB">
+                      <mpeg7:GivenName>Trevor</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Eve</mpeg7:FamilyName>
+                </PersonName>
+                <Character>
+                    <mpeg7:GivenName>Det Super Peter Boyd</mpeg7:GivenName>
+                </Character>
+              </CreditsItem>
+             
+              <CreditsItem role="urn:mpeg:mpeg7:cs:RoleCS:2001:ACTOR">
+                <PersonName xml:lang="en-GB">
+                    <mpeg7:GivenName>Sue</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Johnston</mpeg7:FamilyName>
+                </PersonName>
+                <Character>
+                    <mpeg7:GivenName>Dr Grace Foley</mpeg7:GivenName>
+                </Character>
+                <Character>
+                    <mpeg7:GivenName>Miss Foley</mpeg7:GivenName>
+                </Character>
+              </CreditsItem>
+             
+              <CreditsItem role="urn:mpeg:mpeg7:cs:RoleCS:2001:DIRECTOR">
+                <PersonName xml:lang="en-GB">
+                    <mpeg7:GivenName>Marc</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Jobst</mpeg7:FamilyName>
+                </PersonName>
+              </CreditsItem>
+              
+              <CreditsItem role="urn:tva:metadata:cs:TVARoleCS:2012:AD6">
+                  <PersonName xml:lang="en-GB">
+                    <mpeg7:GivenName>John</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Sergeant</mpeg7:FamilyName>
+                  </PersonName>              
+                </CreditsItem>
+                <CreditsItem role="urn:ebu:metadata-cs:RoleCodeCS:25.2">
+                  <PersonName xml:lang="en-GB">
+                    <mpeg7:GivenName>Colin</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Wratten</mpeg7:FamilyName>
+                  </PersonName>              
+                </CreditsItem>
+                <CreditsItem role="urn:tva:metadata:cs:BBCRoleCS:READER">
+                  <PersonName xml:lang="en-GB">
+                    <mpeg7:GivenName>Mr</mpeg7:GivenName>
+                    <mpeg7:FamilyName>Reader</mpeg7:FamilyName>
+                  </PersonName>              
+                </CreditsItem>
+                
+                <CreditsItem role="urn:eventis:metadata:cs:RoleCS:2010:CONTENT-PROVIDER">
+                    <OrganizationName xml:lang="en-GB">bbc_one</OrganizationName>
+                </CreditsItem>
+                
+          </CreditsList>   
+                       
+          <RelatedMaterial>
+            <HowRelated href="urn:eventis:metadata:cs:HowRelatedCS:2010:33.1" />
+            <MediaLocator>
+              <mpeg7:MediaUri>crid://bbc.co.uk/p/12443237</mpeg7:MediaUri>
+            </MediaLocator>
+          </RelatedMaterial>
+          <RelatedMaterial>
+            <HowRelated href="urn:eventis:metadata:cs:DynamicHowRelatedCS:2012:16x9" />
+            <MediaLocator>
+              <mpeg7:MediaUri>http://deltaorigin.bbc.co.uk/images/live/p0/1h/1j/p01h1jrr.jpg</mpeg7:MediaUri>
+            </MediaLocator>
+          </RelatedMaterial>
+          <RelatedMaterial>
+            <HowRelated href="urn:eventis:metadata:cs:DynamicHowRelatedCS:2012:square" />
+            <MediaLocator>
+              <mpeg7:MediaUri>http://placeholder_future_development.jpg</mpeg7:MediaUri>
+            </MediaLocator>
+          </RelatedMaterial>
+          <ProductionDate>
+            <TimePoint>2011</TimePoint>
+          </ProductionDate>
+          <Language>EN</Language>
+        </BasicDescription>
+        <OtherIdentifier type="PIPS_PID" organization="bbc" authority="bbc">b00zn9b2</OtherIdentifier>  
+        <OtherIdentifier type="PIPS_UID" organization="bbc" authority="bbc">DRAA841L</OtherIdentifier>
+        <EpisodeOf xsi:type="EpisodeOfType" crid="crid://bbc.co.uk/b/28343123" index="1" />
+        
+      </ProgramInformation>
+    </ProgramInformationTable>
+  </ProgramDescription>
+</TVAMain>

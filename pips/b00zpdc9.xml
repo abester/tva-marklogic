@@ -1,0 +1,44 @@
+<series revision="1" pid="b00zpdc9" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/" last_modified="2011-03-04T02:29:09Z" last_modified_supplier="rbm" stated_items="2">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/28343123"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/28343123</id>
+      <id type="pid" authority="pips">b00zpdc9</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:series" index="1" pid="b00zpdbc" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdbc/"/>
+    </member_of>
+    <master_brand/>
+    <title>Harbinger</title>
+    <synopses>
+      <synopsis length="short">The team, complete with a new recruit, investigate the mystery of a missing banker.</synopsis>
+      <synopsis length="medium">Boyd has to break in a new team member of equal rank, while the team investigate the mystery of a missing banker in order to help his family find closure.</synopsis>
+    </synopses>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <stack/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/descendants/clips/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/siblings/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdc9/rights_contracts/"/>
+    </links>
+  </series>

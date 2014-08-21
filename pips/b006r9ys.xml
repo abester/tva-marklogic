@@ -1,0 +1,49 @@
+<brand revision="2804" pid="b006r9ys" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/" last_modified="2014-02-13T18:23:16Z" last_modified_supplier="rbm" stated_items="9">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/6235891"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/6235891</id>
+      <id type="pid" authority="pips">b006r9ys</id>
+    </ids>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>Waking the Dead</title>
+    <synopses>
+      <synopsis length="short">Police drama series based around cold cases.</synopsis>
+      <synopsis length="medium">Police drama series based around cold cases.</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00017" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00017/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+      </genre_group>
+      <genre_group genre_id="C00021" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00021/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+        <genre genre_id="200018" type="iplayer_secondlevel">Crime</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <classifications/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/descendants/clips/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/rights_contracts/"/>
+    </links>
+  </brand>
