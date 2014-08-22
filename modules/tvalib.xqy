@@ -12,14 +12,14 @@ import module namespace fnstr = "http://bbc.co.uk/psi/b2b-exporter/modules/fnstr
 declare function tvalib:render-titles($e as element()?)  {
   let $secPreTitle := 
     if ($e/title/text() ) then 
-        fnstr:clean-first-word($e/title/text())
+      fnstr:clean-first-word($e/title/text())
     else
-        fnstr:clean-first-word($e/presentation_title/text())
-    return(
-        <Title xml:lang="{$glb:locale}" type="main">{$e/title/text()}</Title>,
-        <ShortTitle xml:lang="{$glb:locale}" type="main" length="{string-length($e/presentation_title/text())}">{$e/presentation_title/text()}</ShortTitle>,
-        <ShortTitle xml:lang="{$glb:locale}" type="secondary" length="{string-length($secPreTitle)}">{$secPreTitle}</ShortTitle>
-    ) 
+      fnstr:clean-first-word($e/presentation_title/text())
+  return (
+      <Title xml:lang="{$glb:locale}" type="main">{$e/title/text()}</Title>,
+      if ($e/presentation_title) then <ShortTitle xml:lang="{$glb:locale}" type="main" length="{string-length($e/presentation_title/text())}">{$e/presentation_title/text()}</ShortTitle> else (),
+      <ShortTitle xml:lang="{$glb:locale}" type="secondary" length="{string-length($secPreTitle)}">{$secPreTitle}</ShortTitle>
+  ) 
 };
 
 (: 
@@ -37,7 +37,7 @@ declare function tvalib:render-synopses($e as element()?, $len as xs:string){
 declare function tvalib:render-iplayer-genres($e as element()?){
   for $genre_group in $e/genres/genre_group[@type="iplayer_composite"]
   where ( $genre_group[@type="iplayer_composite"] ) 
-  return <Genre href="{$glb:iplayerUrnPrefix}{$genre_group/@genre_id}" type="main" />
+  return <Genre href="{$glb:iplayerUrnPrefix}{data($genre_group/@genre_id)}" type="main" />
 };
 
 (: 
@@ -45,5 +45,5 @@ declare function tvalib:render-iplayer-genres($e as element()?){
  :)
 declare function tvalib:render-other-genres($e as element()?){
   for $format in $e/formats/format
-  return <Genre href="{$glb:iplayerUrnPrefix}{$format/@format_id}" type="other" />
+  return <Genre href="{$glb:iplayerUrnPrefix}{data($format/@format_id)}" type="other" />
 };

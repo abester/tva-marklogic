@@ -19,7 +19,9 @@ declare function brand:render-content($pid as xs:string, $cid as xs:string, $ove
   let $uid := $root/ids/id[@type='uid']/text()
   let $changeEventId := $cid
 
-  return
+  let $result :=
+  if (empty ($root)) then ()
+  else
     <GroupInformation groupId="{$crid}" xml:lang="{$glb:locale}" fragmentId="{$pid}" fragmentVersion="{$changeEventId}">
       <GroupType xsi:type="ProgramGroupTypeType" value="show" />
         <BasicDescription>
@@ -40,6 +42,8 @@ declare function brand:render-content($pid as xs:string, $cid as xs:string, $ove
             else ()
         }
       </BasicDescription>
-  </GroupInformation>
+    </GroupInformation>
+  return $result
+
 };
 

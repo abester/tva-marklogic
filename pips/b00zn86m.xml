@@ -1,0 +1,228 @@
+<version revision="2" pid="b00zn86m" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/" last_modified="2011-03-11T11:44:06Z" last_modified_supplier="rbm">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/28309343"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/28309343</id>
+      <id type="pid" authority="pips">b00zn86m</id>
+      <id type="uid" authority="onair">DRAA841L/01</id>
+    </ids>
+    <member_of_brand>
+      <link rel="pips-meta:brand" pid="b006r9ys" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/"/>
+    </member_of_brand>
+    <version_of>
+      <link rel="pips-meta:episode" pid="b00zn9b2" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b00zn9b2/"/>
+    </version_of>
+    <master_brand/>
+    <version_types>
+      <version_reason></version_reason>
+      <version_type revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/version_type/version_type_id.Original/" last_modified="2008-10-06T11:01:48Z" version_type_id="Original" last_modified_supplier="pips">Original version</version_type>
+    </version_types>
+    <languages>
+      <language>EN</language>
+    </languages>
+    <duration>01:00:00</duration>
+    <subtitles/>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <warnings>
+      <warning_text length="short">Contains disturbing scenes.</warning_text>
+      <warning_text length="long">Contains scenes which some viewers may find disturbing.</warning_text>
+      <warning short_description="disturbing scenes" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/warning/warning_id.D3/" last_modified="2008-10-06T11:01:48Z" denton_flag="0" combine_order="4" last_modified_supplier="pips" warning_code="D3">contains scenes which some viewers may find disturbing</warning>
+    </warnings>
+    <competition_warning value="false"/>
+    <credits>
+      <credit index="1" role="ACTOR">
+        <character_name>Det Super Peter Boyd</character_name>
+        <alias>
+          <given_name>Trevor</given_name>
+          <family_name>Eve</family_name>
+        </alias>
+      </credit>
+      <credit index="2" role="ACTOR">
+        <character_name>Dr Grace Foley</character_name>
+        <alias>
+          <given_name>Sue</given_name>
+          <family_name>Johnston</family_name>
+        </alias>
+      </credit>
+      <credit index="3" role="ACTOR">
+        <character_name>Dr Eve Lockhart</character_name>
+        <alias>
+          <given_name>Tara</given_name>
+          <family_name>Fitzgerald</family_name>
+        </alias>
+      </credit>
+      <credit index="4" role="ACTOR">
+        <character_name>Sarah Cavendish</character_name>
+        <alias>
+          <given_name>Eva</given_name>
+          <family_name>Birthistle</family_name>
+        </alias>
+      </credit>
+      <credit index="5" role="ACTOR">
+        <character_name>DI Spencer Jordan</character_name>
+        <alias>
+          <given_name>Wil</given_name>
+          <family_name>Johnson</family_name>
+        </alias>
+      </credit>
+      <credit index="6" role="ACTOR">
+        <character_name>Una Mason</character_name>
+        <alias>
+          <given_name>Cecilia</given_name>
+          <family_name>Noble</family_name>
+        </alias>
+      </credit>
+      <credit index="7" role="ACTOR">
+        <character_name>Julie Myers</character_name>
+        <alias>
+          <given_name>Sophie</given_name>
+          <family_name>Winter</family_name>
+        </alias>
+      </credit>
+      <credit index="8" role="ACTOR">
+        <character_name>Elsa Geiger</character_name>
+        <alias>
+          <given_name>Amelda</given_name>
+          <family_name>Brown</family_name>
+        </alias>
+      </credit>
+      <credit index="9" role="ACTOR">
+        <character_name>Ernst Geiger</character_name>
+        <alias>
+          <given_name>Ian</given_name>
+          <family_name>Hanmore</family_name>
+        </alias>
+      </credit>
+      <credit index="10" role="ACTOR">
+        <character_name>Glenn Burke</character_name>
+        <alias>
+          <given_name>Graham</given_name>
+          <family_name>Turner</family_name>
+        </alias>
+      </credit>
+      <credit index="11" role="ACTOR">
+        <character_name>Ken Deighton</character_name>
+        <alias>
+          <given_name>Robert</given_name>
+          <family_name>Morgan</family_name>
+        </alias>
+      </credit>
+      <credit index="12" role="ACTOR">
+        <character_name>Maureen Smith</character_name>
+        <alias>
+          <given_name>Elizabeth</given_name>
+          <family_name>Rider</family_name>
+        </alias>
+      </credit>
+      <credit index="13" role="ACTOR">
+        <character_name>Donald Rees</character_name>
+        <alias>
+          <given_name>Charles</given_name>
+          <family_name>Edwards</family_name>
+        </alias>
+      </credit>
+      <credit index="14" role="ACTOR">
+        <character_name>Julie Rees</character_name>
+        <alias>
+          <given_name>Genevieve</given_name>
+          <family_name>O'Reilly</family_name>
+        </alias>
+      </credit>
+      <credit index="15" role="ACTOR">
+        <character_name>Miranda Rees</character_name>
+        <alias>
+          <given_name>Rosy</given_name>
+          <family_name>Byrne</family_name>
+        </alias>
+      </credit>
+      <credit index="16" role="ACTOR">
+        <character_name>Toby Rees</character_name>
+        <alias>
+          <given_name>Felix</given_name>
+          <family_name>Soper</family_name>
+        </alias>
+      </credit>
+      <credit index="17" role="ACTOR">
+        <character_name>Nicola Rees</character_name>
+        <alias>
+          <given_name>Sinead</given_name>
+          <family_name>Michael</family_name>
+        </alias>
+      </credit>
+      <credit index="18" role="ACTOR">
+        <character_name>Rick Scoble</character_name>
+        <alias>
+          <given_name>Rocky</given_name>
+          <family_name>Marshall</family_name>
+        </alias>
+      </credit>
+      <credit index="19" role="ACTOR">
+        <character_name>Denise Metcalf</character_name>
+        <alias>
+          <given_name>Janet</given_name>
+          <family_name>Dibley</family_name>
+        </alias>
+      </credit>
+      <credit index="20" role="ACTOR">
+        <character_name>Sue Myers</character_name>
+        <alias>
+          <given_name>Susan</given_name>
+          <family_name>Brown</family_name>
+        </alias>
+      </credit>
+      <credit index="21" role="ACTOR">
+        <character_name>WPC Gina Allen</character_name>
+        <alias>
+          <given_name>Stacey</given_name>
+          <family_name>Sampson</family_name>
+        </alias>
+      </credit>
+      <credit index="22" role="DIRECTOR">
+        <character_name></character_name>
+        <alias>
+          <given_name>Marc</given_name>
+          <family_name>Jobst</family_name>
+        </alias>
+      </credit>
+      <credit index="23" role="PRODUCER">
+        <character_name></character_name>
+        <alias>
+          <given_name>Colin</given_name>
+          <family_name>Wratten</family_name>
+        </alias>
+      </credit>
+      <credit index="24" role="SCRIPTWRITER">
+        <character_name></character_name>
+        <alias>
+          <given_name>Ed</given_name>
+          <family_name>Whitmore</family_name>
+        </alias>
+      </credit>
+    </credits>
+    <audio_visual_attributes>
+      <aspect_ratio>16:9</aspect_ratio>
+      <sound_format>Stereo</sound_format>
+      <colour>colour</colour>
+    </audio_visual_attributes>
+    <source_asset/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/broadcasts/"/>
+      <link rel="pips-meta:ondemand-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/ondemands/"/>
+      <link rel="pips-meta:media_asset-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/media_assets/"/>
+      <link rel="pips-meta:window-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/windows/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/siblings/"/>
+      <link rel="pips-meta:segment_event-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/segment_events/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/rights_contracts/"/>
+      <link rel="pips-meta:blanking-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/version/pid.b00zn86m/blankings/"/>
+    </links>
+  </version>

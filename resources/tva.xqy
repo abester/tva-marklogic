@@ -1,4 +1,4 @@
-(:?version=1.0&provider=BBC&title=B2B-Exporter-Tva-Xml&description=Provide%20TVA%20%20Xml&method=get&get:cid=xs:string&get:pid=xs:string
+(:?version=1.0&provider=BBC&title=B2B-Exporter-Tva-Xml&description=Provide%20TVA%20Xml&method=get&get:cid=xs:string&get:pid=xs:string
 :)
 xquery version "1.0-ml";
 
