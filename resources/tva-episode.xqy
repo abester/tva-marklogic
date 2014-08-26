@@ -20,5 +20,5 @@ declare function rest:get($context as map:map, $params as map:map) as document-n
    :)
 
 let $content as element()? := episode:render-content($pid, $cid, ())
-return document { $content } 
+return document {$content} 
 };

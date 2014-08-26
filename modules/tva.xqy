@@ -32,10 +32,10 @@ declare function tva:render-content($pid as xs:string, $cid as xs:string, $overi
  : Assembler - Responsible for joining brand, series, epispode, etc. into the TVA XML document 
  :)
 declare function tva:assemble-segments($pid as xs:string, $cid as xs:string, $segments as element()* ) {
-  let $root as item() := doc(concat($glb:docStoreEndPoint,$pid))
+  let $root as item()?  := doc(concat($glb:docStoreEndPoint,$pid))
   let $parentPid as xs:string? := tvalib:get-parent-pid($root)
-  let $segment := insert-before($segments, 1, tva:render-segment($pid,$cid,$root/element()))
-  let $content := 
+  let $segment as element()* := insert-before($segments, 1, tva:render-segment($pid,$cid,$root/element()))
+  let $content as element()* := 
     if ($parentPid) then tva:assemble-segments($parentPid,$cid,$segment)
     else  $segment
   return $content 

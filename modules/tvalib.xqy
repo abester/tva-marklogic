@@ -19,7 +19,8 @@ declare function tvalib:get-parent-pid($root as item()?) as xs:string?{
       data(($root)/clip/clip_of/link/@pid)     
   else if (($root)//member_of/link/@pid) then (: episode, series, brand :)
       data(($root)//member_of/link/@pid)
-  else ( "" )
+  else 
+      ( "" )
 };
 
 
@@ -45,7 +46,8 @@ declare function tvalib:render-titles($e as element()?) as element()* {
 declare function tvalib:render-synopses($e as element()?, $len as xs:string) as element()? {
   if ($e/synopses/synopsis[@length=$len]/text()) then 
       <Synopsis xml:lang="{$glb:locale}" length="{$len}">{$e/synopses/synopsis[@length=$len]/text()}</Synopsis>
-  else ()
+  else 
+      ()
 }; 
 
 (: 

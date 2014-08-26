@@ -11,7 +11,8 @@ import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tval
  :)
 declare function episode:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 
-  let $root as element()? := doc(concat($glb:docStoreEndPoint,$pid))/element()
+  let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
+
 
   let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
   let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()
@@ -32,7 +33,7 @@ declare function episode:render-content($pid as xs:string, $cid as xs:string, $o
           tvalib:render-other-genres($root)
         }
         { if ($root/release_date/@year) then 
-              <Genre href="urn:eventis:metadata:cs:PropertyCS:2010:releaseDate" type="other">
+              <Genre href="{$glb:releaseDateUrn}" type="other">
                 <Name xml:lang="en-GB">ReleaseDate</Name>
                 <Definition>{data($root/release_date/@year)}</Definition>
               </Genre>
@@ -50,7 +51,7 @@ declare function episode:render-content($pid as xs:string, $cid as xs:string, $o
           
         </BasicDescription>
 
-        { episode:render-episode-of($root/member_of) }
+        { episode:render-episode-of($root/member_of,()) }
 
         <OtherIdentifier type="PIPS_PID" organization="{$glb:organisation}" authority="{$glb:authority}">{$pid}</OtherIdentifier>
         { if ($uid) then 
@@ -63,9 +64,9 @@ declare function episode:render-content($pid as xs:string, $cid as xs:string, $o
 };
 
 (: Render - EpisodeOf tag :)
-declare function episode:render-episode-of($memberOf as element()?) as element()? {
+declare function episode:render-episode-of($memberOf as element()?, $parentOveride as element()?) as element()? {
 
-  let $parentMemberOfLink as element() :=
+  let $parentMemberOfLink as element()? :=
      if ( $memberOf/link[@rel='pips-meta:series'] )  then
       $memberOf/link[@rel='pips-meta:series']
     else if ( $memberOf/link[@rel='pips-meta:brand'] )  then
@@ -77,7 +78,7 @@ declare function episode:render-episode-of($memberOf as element()?) as element()
 
   let $content as element()? :=
     if ($parentPid) then
-        let $parentDoc as item()? := doc(concat($glb:docStoreEndPoint,$parentPid))
+        let $parentDoc as item()? :=  if (empty($parentOveride)) then doc(concat($glb:docStoreEndPoint,$parentPid)) else $parentOveride
         let $parentCrid as xs:string? := $parentDoc//crid/@uri
         return  <EpisodeOf xsi:type="EpisodeOfType" crid="{$parentCrid}" index="{$parentMemberOfLink/@index}" />
   else ()

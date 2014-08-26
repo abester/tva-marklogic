@@ -1,7 +1,7 @@
 
 #!/bin/bash
 #----------------------------------------------------------
-# Desc   : Load xray files into Marklogic
+# Desc   : Load modules/extensions into Marklogic Document Store
 # Authors: Andreas Bester
 #----------------------------------------------------------
 #set -x  #debug on
@@ -19,32 +19,20 @@ declare host="http://localhost"
 declare port="8003"
 
 
-# Allow for basic authentication
+#Allow for basic authentication
 declare cred_base64=$(printf $authentication | base64)
 declare connection="$host:$port"
 declare counter=0
 declare resource
-declare extension
 
-echo "Loading xray 'xqy'..."
-cd xray
-for data in $(find . -type f | grep '.xqy');
+cd test
+echo "Loading Tests ..."
+for data in $(ls *.xqy);
  do
-    extension=$(printf $data | cut -c 3-)
-    resource="/ext/xquery/xray/$extension"
+    resource="/ext/xquery/test/$data"
     curl -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource" \
      && ((counter++))
-    echo -e " <response [$counter] Loaded $extension into modules store at URI: $resource";
-done;
-
-echo "Loading xray 'xss','xsd'..."
-for data in $(find . -type f | grep '.xsd\|.xsl');
- do
-    extension=$(printf $data | cut -c 3-)
-    resource="/ext/xquery/xray/$extension"
-    curl -X PUT -w %{http_code} -H "Content-type: application/xslt+xml" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource" \
-     && ((counter++))
-    echo -e " <response [$counter] Loaded $extension into modules store at URI: $resource";
+    echo -e " <response [$counter] Loaded $data into modules store at URI: $resource";
 done;
 
 echo -e "\nTo view all modules: $connection/v1/ext/"
