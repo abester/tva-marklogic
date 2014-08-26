@@ -11,3 +11,5 @@ declare variable $organisation as xs:string  := "bbc";
 declare variable $authority as xs:string  := "bbc";
 
 declare variable $iplayerUrnPrefix as xs:string :=  "urn:bbc:metadata:cs:iPlayerFormatCS:2007:";
+
+declare variable $docStoreEndPoint as xs:string := "/pips/"; (: end point used to read all pips documents :)

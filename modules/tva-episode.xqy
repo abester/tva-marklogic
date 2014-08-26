@@ -4,25 +4,23 @@ xquery version "1.0-ml";
 module namespace episode = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-episode";
     
 import module namespace glb = "http://bbc.co.uk/psi/b2b-exporter/modules/globals" at "/ext/b2b-exporter/modules/globals.xqy";
-import module namespace fnstr = "http://bbc.co.uk/psi/b2b-exporter/modules/fnstr" at "/ext/b2b-exporter/modules/fnstr.xqy";
 import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tvalib" at "/ext/b2b-exporter/modules/tvalib.xqy";
 
 (:  
  : Main Renderer -  Generates TVA Episode XML  
  :)
-declare function episode:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) {
+declare function episode:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 
-  let $root := doc(concat("/pips/",$pid))/episode
+  let $root as element()? := doc(concat($glb:docStoreEndPoint,$pid))/element()
 
-  let $pid := $root/ids/id[@type='pid']/text()
-  let $crid := $root/ids/id[@type='crid']/text()
-  let $uid := $root/ids/id[@type='uid']/text()
-  let $changeEventId := $cid
+  let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
+  let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()
+  let $uid  as xs:string? := $root/ids/id[@type='uid' and @authority='pips']/text()
 
-  let $result :=
-    if (empty ($root)) then ()
-    else
-      <ProgramInformation programId="{$crid}" xml:lang="{$glb:locale}" fragmentId="{$pid}" fragmentVersion="{$changeEventId}">
+  let $content as element()? := 
+  if (empty ($root)) then ()
+  else
+      <ProgramInformation programId="{$crid}" xml:lang="{$glb:locale}" fragmentId="{$pid}" fragmentVersion="{$cid}">
         <BasicDescription>
         { tvalib:render-titles($root),
 
@@ -60,32 +58,31 @@ declare function episode:render-content($pid as xs:string, $cid as xs:string, $o
           else ()
         }
       </ProgramInformation>
-    return $result
+    return $content
 
 };
 
-
 (: Render - EpisodeOf tag :)
-declare function episode:render-episode-of($memberOf){
+declare function episode:render-episode-of($memberOf as element()?) as element()? {
 
-  let $parentMemberOfLink as node() :=
+  let $parentMemberOfLink as element() :=
      if ( $memberOf/link[@rel='pips-meta:series'] )  then
       $memberOf/link[@rel='pips-meta:series']
     else if ( $memberOf/link[@rel='pips-meta:brand'] )  then
       $memberOf/link[@rel='pips-meta:brand']
-    else
+    else  
       ()
 
-  let $parentPid := $parentMemberOfLink/@pid
+  let $parentPid as xs:string? := $parentMemberOfLink/@pid
 
-  let $result:=
+  let $content as element()? :=
     if ($parentPid) then
-        let $parentDoc := doc(concat("/pips/",$parentPid))
-        let $parentCrid := $parentDoc//crid/@uri
+        let $parentDoc as item()? := doc(concat($glb:docStoreEndPoint,$parentPid))
+        let $parentCrid as xs:string? := $parentDoc//crid/@uri
         return  <EpisodeOf xsi:type="EpisodeOfType" crid="{$parentCrid}" index="{$parentMemberOfLink/@index}" />
   else ()
 
-  return $result
+  return $content
 
 };
 

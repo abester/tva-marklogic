@@ -3,7 +3,7 @@ xquery version "1.0-ml";
 (:/ext/b2b-exporter/modules/fnstr.xqy :)
 module namespace fnstr = "http://bbc.co.uk/psi/b2b-exporter/modules/fnstr";
 
-declare private variable $articles := ("a ","an ","the ");
+declare private variable $articles  := ("a ","an ","the ");
 declare private variable $alphaNumeric as xs:string := "[^a-zA-Z0-9]";
 declare private variable $spaceChar  as xs:string  := " ";
 
@@ -14,8 +14,8 @@ declare private variable $spaceChar  as xs:string  := " ";
  : @return the whole string, with the first word free from non alphanumeric characters or entire string
  :)
 declare function fnstr:clean-first-word($s as xs:string?) as xs:string? {
-  let $articleFreeStr := fnstr:remove-articles($s)
-  let $result :=
+  let $articleFreeStr as xs:string? := fnstr:remove-articles($s)
+  let $result as xs:string? :=
     if ( contains($articleFreeStr,$spaceChar) ) then
         (: clean first word and reconstruct the entire sentence :)
         concat( (fnstr:return-non-alphanum-word($articleFreeStr)),
@@ -53,13 +53,13 @@ declare function fnstr:substring-before-if-contains($s as xs:string?, $delim as 
  : Remove definite & indefinite articles from the beginning of a string.
  :)
 declare private function fnstr:remove-articles($s as xs:string?) as xs:string?  {
-  let $lowerS := lower-case($s)
-  let $matched := 
+  let $lowerS  as xs:string? := lower-case($s)
+  let $matched  as xs:string?  := 
     for $article in $articles
-    where ( starts-with($lowerS, $article) ) 
-    return substring($s, string-length($article) + 1 )
+    where (starts-with($lowerS, $article)) 
+    return substring($s, string-length($article) + 1)
 
-  let $result :=
+  let $result as xs:string? :=
     if ($matched) then
         $matched
      else
@@ -71,8 +71,8 @@ declare private function fnstr:remove-articles($s as xs:string?) as xs:string?  
  : A Space character will be appended to the word.
  :)
 declare private function fnstr:return-non-alphanum-word($s as xs:string?) as xs:string? {
-  let $firstWord := fnstr:remove-non-alphanum(fnstr:substring-before-if-contains($s, $spaceChar))
-  let $result :=
+  let $firstWord  as xs:string? := fnstr:remove-non-alphanum(fnstr:substring-before-if-contains($s, $spaceChar))
+  let $result  as xs:string? :=
     if (string-length($firstWord) > 0) then
         concat($firstWord, $spaceChar)
     else

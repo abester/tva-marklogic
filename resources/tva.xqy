@@ -7,11 +7,12 @@ module namespace rest = "http://marklogic.com/rest-api/resource/tva";
 import module namespace tva = "http://bbc.co.uk/psi/b2b-exporter/modules/tva" at "/ext/b2b-exporter/modules/tva.xqy";
 
 declare function rest:get($context as map:map, $params as map:map) as document-node()* {
-  let $pid as xs:string := xdmp:url-decode(map:get($params,"pid"))
-  let $cid as xs:string := xdmp:url-decode(map:get($params,"cid"))
+  let $pid as xs:string? := xdmp:url-decode(map:get($params,"pid"))
+  let $cid as xs:string? := xdmp:url-decode(map:get($params,"cid"))
 
-  let $output-types := map:put($context,"output-types","application/xml") 
-  let $content := tva:render-content($pid, $cid, ())
+  let $output-types as map:map? := map:put($context,"output-types","application/xml") 
+
+  let $content as element()? := tva:render-content($pid, $cid, ())
   return document { $content } 
 };
 

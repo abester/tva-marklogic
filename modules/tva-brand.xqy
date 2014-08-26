@@ -4,25 +4,23 @@ xquery version "1.0-ml";
 module namespace brand = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-brand";
     
 import module namespace glb = "http://bbc.co.uk/psi/b2b-exporter/modules/globals" at "/ext/b2b-exporter/modules/globals.xqy";
-import module namespace fnstr = "http://bbc.co.uk/psi/b2b-exporter/modules/fnstr" at "/ext/b2b-exporter/modules/fnstr.xqy";
 import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tvalib" at "/ext/b2b-exporter/modules/tvalib.xqy";
 
 (:  
  : Main Renderer -  Generates TVA Brand XML  
  :)
-declare function brand:render-content($pid as xs:string, $cid as xs:string, $overide as element()? ){
+declare function brand:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 
-  let $root := doc(concat("/pips/",$pid))/brand
+  let $root as element()? := doc(concat($glb:docStoreEndPoint,$pid))/element()
 
-  let $pid := $root/ids/id[@type='pid']/text()
-  let $crid := $root/ids/id[@type='crid']/text()
-  let $uid := $root/ids/id[@type='uid']/text()
-  let $changeEventId := $cid
+  let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
+  let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()
+  let $uid  as xs:string? := $root/ids/id[@type='uid' and @authority='pips']/text()
 
-  let $result :=
+  let $content as element()? := 
   if (empty ($root)) then ()
   else
-    <GroupInformation groupId="{$crid}" xml:lang="{$glb:locale}" fragmentId="{$pid}" fragmentVersion="{$changeEventId}">
+    <GroupInformation groupId="{$crid}" xml:lang="{$glb:locale}" fragmentId="{$pid}" fragmentVersion="{$cid}">
       <GroupType xsi:type="ProgramGroupTypeType" value="show" />
         <BasicDescription>
           
@@ -43,7 +41,7 @@ declare function brand:render-content($pid as xs:string, $cid as xs:string, $ove
         }
       </BasicDescription>
     </GroupInformation>
-  return $result
+  return $content
 
 };
 
