@@ -7,11 +7,12 @@ module namespace rest = "http://marklogic.com/rest-api/resource/tva-version";
 import module namespace version = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-version" at "/ext/b2b-exporter/modules/tva-version.xqy";
 
 declare function rest:get($context as map:map, $params as map:map) as document-node()* {
-  let $pid as xs:string := xdmp:url-decode(map:get($params,"pid"))
-  let $cid as xs:string := xdmp:url-decode(map:get($params,"cid"))
+  let $pid as xs:string? := xdmp:url-decode(map:get($params,"pid"))
+  let $cid as xs:string? := xdmp:url-decode(map:get($params,"cid"))
 
-  let $output-types := map:put($context,"output-types","application/xml") 
-  let $content := version:render-content($pid, $cid, ())
+  let $output-types as map:map? := map:put($context,"output-types","application/xml") 
+
+  let $content as element()? := version:render-content($pid, $cid, ())
   return document { $content } 
 };
 

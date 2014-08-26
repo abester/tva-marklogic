@@ -6,7 +6,7 @@ module namespace version = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-versio
 (:  
  : Main Renderer -  Generates TVA Version XML  
  :)
-declare function version:render-content($pid as xs:string, $cid as xs:string, $overide as element()? ){
+declare function version:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 <tva-version></tva-version>
 };
 
