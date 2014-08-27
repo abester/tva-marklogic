@@ -37,7 +37,7 @@ for data in $(find . -type f | grep '.xqy');
     echo -e " <response [$counter] Loaded $extension into modules store at URI: $resource";
 done;
 
-echo "Loading xray 'xss','xsd'..."
+echo "Loading xray 'xsd','xsl'..."
 for data in $(find . -type f | grep '.xsd\|.xsl');
  do
     extension=$(printf $data | cut -c 3-)
