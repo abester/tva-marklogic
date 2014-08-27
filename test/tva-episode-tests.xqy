@@ -94,30 +94,3 @@ declare %test:case function shouldRenderParentSeries(){
   )
 
 };
-
-declare %test:ignore function xmlVisualiser(){
-  let $crid as xs:string := "crid://bbc.co.uk/b/96952213"
-  let $pid as xs:string := "b03czdsr"
-  let $uid as xs:string := "DRRB202X"
-  let $title as xs:string := "!Girl By Any Other Name"
-  let $presentation_title as xs:string := "Episode 2"
-
-  let $sourceEpisode as element() := 
-   <episode>
-     <ids>
-       <id type="crid" authority="bds">{$crid}</id>
-       <id type="pid" authority="pips">{$pid}</id>
-       <id type="uid" authority="onair">{$uid}</id>
-    </ids>
-     <title>{$title}</title>
-     <containers_title>Atlantis</containers_title>
-     <presentation_title>{$presentation_title}</presentation_title>
-        <languages>
-      <language>EN</language>
-    </languages>
-    <release_date month="10" day="5" year="2013"/>
-   </episode>
-  
-  let $tva as element() := episode:render-content("", "", $sourceEpisode)
-  return (  assert:empty($tva) )
- };

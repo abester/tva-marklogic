@@ -15,12 +15,11 @@ declare function series:render-content($pid as xs:string, $cid as xs:string, $ov
 
   let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
   let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()
-  let $uid  as xs:string? := $root/ids/id[@type='uid' and @authority='pips']/text()
- 
+
   let $seriesType as xs:string? :=
-   if ( $root/member_of/link[@rel='pips-meta:series']  )  then
+    if ( $root/member_of/link[@rel='pips-meta:series'] )  then
       "mini-series"
-  else 
+    else 
       "series"
 
   let $content as element()? :=
