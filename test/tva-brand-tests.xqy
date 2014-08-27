@@ -8,6 +8,23 @@ import module namespace brand = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-b
 
 declare namespace xray = "http://github.com/robwhitby/xray";
 
-declare %test:ignore function TODO(){
-  assert:equal("TODO", "TODO")
+declare %test:case function shouldRenderRequiredIds(){
+  let $crid as xs:string := "crid://bbc.co.uk/b/6235891"
+  let $pid  as xs:string := "b006r9ys"
+
+  let $sourceBrand as element() := 
+    <brand>
+      <ids>
+       <id type="crid" authority="pips">{$crid}</id>
+       <id type="pid" authority="pips">{$pid}</id>
+      </ids>
+    </brand>
+  
+  let $tva as element() := brand:render-content("", "", $sourceBrand)
+  return (
+  assert:equal(data($tva/@groupId), $crid ),
+  assert:equal(data($tva/@fragmentId), $pid ),
+  assert:equal(data($tva/OtherIdentifier[@type='PIPS_PID']/text()), $pid)
+  )
+
 };

@@ -13,7 +13,6 @@ declare function episode:render-content($pid as xs:string, $cid as xs:string, $o
 
   let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
 
-
   let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
   let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()
   let $uid  as xs:string? := $root/ids/id[@type='uid' and @authority='pips']/text()

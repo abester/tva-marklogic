@@ -11,7 +11,7 @@ import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tval
  :)
 declare function series:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 
-  let $root as element()? := doc(concat($glb:docStoreEndPoint,$pid))/element()
+  let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
 
   let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
   let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='pips']/text()

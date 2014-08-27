@@ -120,7 +120,4 @@ declare %test:ignore function xmlVisualiser(){
   
   let $tva as element() := episode:render-content("", "", $sourceEpisode)
   return (  assert:empty($tva) )
- }; 
-
-
-
+ };
