@@ -28,3 +28,49 @@ declare %test:case function shouldRenderRequiredIds(){
   )
 
 };
+
+(: Mini series, with series as the parent :)
+declare %test:case function shouldRenderParentSeries(){
+  let $parentPid as xs:string := "b00zpdc9"
+  let $parentCrid as xs:string := "crid://bbc.co.uk/b/28343123"
+  let $sourceMiniSeries as element() := 
+   <member_of>
+    <link rel="pips-meta:series" index="1" pid="{$parentPid}"></link>
+   </member_of>
+
+  let $sourceSeries as element() := 
+  <series pid="{$parentPid}">
+    <crid uri="{$parentCrid}">
+    </crid>
+  </series>
+
+  let $result as element() := series:render-member-of($sourceMiniSeries, $sourceSeries)
+
+  return (
+    assert:equal(data($result/@crid), $parentCrid)
+  )
+
+};
+
+(: Series, with brand as the parent :)
+declare %test:case function shouldRenderParentBrand(){
+  let $parentPid as xs:string := "b00zpdc9"
+  let $parentCrid as xs:string := "crid://bbc.co.uk/b/28343123"
+  let $sourceSeries as element() := 
+   <member_of>
+    <link rel="pips-meta:brand" index="1" pid="{$parentPid}"></link>
+   </member_of>
+
+  let $sourceBrand as element() := 
+  <brand pid="{$parentPid}">
+    <crid uri="{$parentCrid}">
+    </crid>
+  </brand>
+
+  let $result as element() := series:render-member-of($sourceSeries, $sourceBrand)
+
+  return (
+    assert:equal(data($result/@crid), $parentCrid)
+  )
+
+};

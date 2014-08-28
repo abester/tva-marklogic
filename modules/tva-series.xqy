@@ -39,7 +39,7 @@ declare function series:render-content($pid as xs:string, $cid as xs:string, $ov
         }
         </BasicDescription>
 
-        { series:render-member-of($root/member_of, $seriesType) }
+        { series:render-member-of($root/member_of, ()) }
 
       <OtherIdentifier type="PIPS_PID" organization="{$glb:organisation}" authority="{$glb:authority}">{$pid}</OtherIdentifier>
   </GroupInformation>
@@ -48,16 +48,16 @@ return $content
 };
 
 (: Render - MemberOf tag :)
-declare function series:render-member-of($memberOf as element()?, $seriesType as xs:string) as element()? {
+declare function series:render-member-of($memberOf as element()?, $parentOveride as element()?) as element()? {
   let $parentMemberOfLink as element()? := 
-    if ($seriesType = "mini-series") then $memberOf/link[@rel='pips-meta:series']
+    if ($memberOf/link[@rel='pips-meta:series']) then $memberOf/link[@rel='pips-meta:series']
     else $memberOf/link[@rel='pips-meta:brand']
     
   let $parentPid as xs:string? := $parentMemberOfLink/@pid
 
   let $content as element()? :=
     if ($parentPid) then
-        let $parentDoc as item()? := doc(concat($glb:docStoreEndPoint,$parentPid))
+        let $parentDoc as item()? :=  if (empty($parentOveride)) then doc(concat($glb:docStoreEndPoint,$parentPid)) else $parentOveride
         let $parentCrid as xs:string? := $parentDoc//crid/@uri
         return  <MemberOf xsi:type="MemberOfType" crid="{$parentCrid}" index="{$parentMemberOfLink/@index}" />
   else ()
