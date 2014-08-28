@@ -14,7 +14,7 @@ declare function brand:render-content($pid as xs:string?, $cid as xs:string?, $o
   let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
 
   let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
-  let $crid as xs:string? := $root/ids/id[@type='crid' and @authority='bds']/text()
+  let $crid as xs:string? := tvalib:get-crid($root/ids)
 
   let $content as element()? := 
   if (empty ($root)) then ()

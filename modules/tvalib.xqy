@@ -12,15 +12,24 @@ import module namespace fnstr = "http://bbc.co.uk/psi/b2b-exporter/modules/fnstr
  :)
 declare function tvalib:get-parent-pid($root as item()?) as xs:string?{
   if (($root)/ondemand/broadcast_of/link/@pid) then
-      data(($root)/ondemand/broadcast_of/link/@pid)
+    data(($root)/ondemand/broadcast_of/link/@pid)
   else if (($root)/version/version_of/link/@pid) then
-      data(($root)/version/version_of/link/@pid)
+    data(($root)/version/version_of/link/@pid)
   else if (($root)/clip/clip_of/link/@pid) then
-      data(($root)/clip/clip_of/link/@pid)     
+    data(($root)/clip/clip_of/link/@pid)     
   else if (($root)//member_of/link/@pid) then (: episode, series, brand :)
-      data(($root)//member_of/link/@pid)
+    data(($root)//member_of/link/@pid)
   else 
-      ( "" )
+    ( "" )
+};
+
+declare function tvalib:get-crid($ids as element()) as xs:string?{
+  let $crid := $ids/id[@type='crid' and @authority='bds']
+  return
+        if ($crid) then 
+        data($crid/text())
+        else 
+        data($ids/id[@type='crid' and @authority='pips']/text())
 };
 
 (: 
