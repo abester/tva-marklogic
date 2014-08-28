@@ -32,7 +32,7 @@ for data in $(ls *.xqy);
  do
     metadata=$(head -1 $data | cut -c 3-)
     echo $firstLine
-    resource="/v1/config/resources/${data%.*}"
+    resource="/v1/config/resources/b2b-exporter-${data%.*}"
     curl -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection$resource$metadata" \
      && ((counter++))
     echo -e " <response [$counter] Loaded $data into modules store at URI: $resource";

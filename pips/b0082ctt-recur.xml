@@ -1,0 +1,64 @@
+<episode revision="10" pid="b0082fwm" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/" last_modified="2012-01-14T18:03:17Z" last_modified_supplier="rbm">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/7461099"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/7461099</id>
+      <id type="pid" authority="pips">b0082fwm</id>
+      <id type="uid" authority="onair">ENEA692A</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:series" index="2" pid="b0082ctt" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/"/>
+    </member_of>
+    <member_of_brand>
+      <link rel="pips-meta:brand" pid="b006mj59" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/"/>
+    </member_of_brand>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_two" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_two/"/>
+    </master_brand>
+    <title></title>
+    <containers_title>Top Gear: Series 10</containers_title>
+    <presentation_title>Episode 2</presentation_title>
+    <release_date/>
+    <uri/>
+    <synopses>
+      <synopsis length="short">The presenters revisit their attempt to build amphibious cars.</synopsis>
+      <synopsis length="medium">Motoring show. Jeremy, James and Richard again attempt to build amphibious cars. The Audi R8 is on the Top Gear track and Jools Holland is the Star in a Reasonably Priced Car.</synopsis>
+      <synopsis length="long">Motoring magazine show with Jeremy Clarkson, James May and Richard Hammond. The presenters revisit their attempt to build amphibious cars, and face up to one of their biggest and choppiest challenges to date. Also, the Audi R8 attacks the Top Gear track and Jools Holland is the Star in a Reasonably Priced Car.</synopsis>
+    </synopses>
+    <languages>
+      <language>EN</language>
+    </languages>
+    <genres>
+      <genre_group genre_id="C00052" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00052/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100005" type="iplayer_toplevel">Factual</genre>
+        <genre genre_id="200047" type="iplayer_secondlevel">Cars &amp; Motors</genre>
+      </genre_group>
+    </genres>
+    <formats>
+      <format format_id="PT009" revision="3" href="https://api.live.bbc.co.uk/pips/api/v1/format/format_id.PT009/" last_modified="2008-10-09T16:28:53Z" last_modified_supplier="pips">Magazines &amp; Reviews</format>
+    </formats>
+    <classifications/>
+    <media_type value="audio_video"/>
+    <filename_template/>
+    <origination/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/descendants/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/siblings/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/children/clips/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/descendants/clips/"/>
+      <link rel="pips-meta:version-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/versions/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/rights_contracts/"/>
+    </links>
+  </episode>

@@ -1,0 +1,51 @@
+<brand revision="576" pid="b006mj59" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/" last_modified="2013-05-16T07:28:33Z" last_modified_supplier="rbm">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/6122695"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/6122695</id>
+      <id type="pid" authority="pips">b006mj59</id>
+    </ids>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_two" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_two/"/>
+    </master_brand>
+    <title>Top Gear</title>
+    <synopses>
+      <synopsis length="short">Motoring magazine, including road tests, news and features.</synopsis>
+      <synopsis length="medium">Jeremy Clarkson, Richard Hammond and James May take a wry look at the motoring world with car news, reviews and test track challenges</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00052" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00052/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100005" type="iplayer_toplevel">Factual</genre>
+        <genre genre_id="200047" type="iplayer_secondlevel">Cars &amp; Motors</genre>
+      </genre_group>
+      <genre_group genre_id="C00200" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00200/" last_modified="2009-04-15T16:38:28Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100012" type="iplayer_toplevel">Entertainment</genre>
+      </genre_group>
+    </genres>
+    <formats>
+      <format format_id="PT009" revision="3" href="https://api.live.bbc.co.uk/pips/api/v1/format/format_id.PT009/" last_modified="2008-10-09T16:28:53Z" last_modified_supplier="pips">Magazines &amp; Reviews</format>
+    </formats>
+    <classifications/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/descendants/clips/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/rights_contracts/"/>
+    </links>
+  </brand>

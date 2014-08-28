@@ -23,6 +23,37 @@ declare function tvalib:get-parent-pid($root as item()?) as xs:string?{
       ( "" )
 };
 
+(: 
+ : Returns all the ancestors for the given element, based on its pid
+ :)
+declare function tvalib:get-ancestors($pid as xs:string, $cid as xs:string, $segments as element()*) as element()* {
+  let $root as item()?  := doc(concat($glb:docStoreEndPoint,$pid))
+  let $parentPid as xs:string? := tvalib:get-parent-pid($root)
+  let $segment as element()* := insert-before($segments, 1, tvalib:add-ancestor($pid,$cid,$root/element()))
+  let $content as element()* := 
+    if ($parentPid) then tvalib:get-ancestors($parentPid,$cid,$segment)
+    else  $segment
+  return $content 
+};
+
+(: 
+ : Given an element return the related ancestor element
+ :)
+declare function tvalib:add-ancestor($pid as xs:string, $cid as xs:string, $e as element()?) as element()* {
+  typeswitch($e)
+  case element(ondemand) return <ondemand pid="{$pid}" cid="{$cid}" />
+  case element(version)  return <version pid="{$pid}" cid="{$cid}" />
+  case element(clip)     return <clip pid="{$pid}" cid="{$cid}" />
+  case element(episode)  return <episode pid="{$pid}" cid="{$cid}" />
+  case element(series)   return ( 
+                          if ($e/member_of/link[@rel='pips-meta:series']) then
+                              <miniseries pid="{$pid}" cid="{$cid}" />
+                          else
+                              <series pid="{$pid}" cid="{$cid}" />
+                          )
+  case element(brand)    return <brand pid="{$pid}" cid="{$cid}" />
+  default return ()
+};
 
 (:  
  : Render - Title & Short Title 

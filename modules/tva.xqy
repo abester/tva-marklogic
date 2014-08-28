@@ -14,44 +14,43 @@ import module namespace episode = "http://bbc.co.uk/psi/b2b-exporter/modules/tva
  :)
 declare function tva:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
  
-  let $segments as element()* := tva:assemble-segments($pid, $cid,())
+  let $ancestors := <ancestors>{tvalib:get-ancestors($pid,$cid,())}</ancestors>
+  let $segments as element()* := tva:render-all-segments($ancestors)
   let $content as element()? := 
     if (empty ($segments)) then ()
     else
       <TVAMain xml:lang="{$glb:locale}" xmlns="urn:tva:metadata:2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mpeg7="urn:tva:mpeg7:2008">
-        <ProgramDescription>
-          <ProgramInformationTable>
-          {$segments}
-          </ProgramInformationTable>
-        </ProgramDescription>
+        {$segments}
       </TVAMain>
   return $content
 };
 
 (: 
- : Assembler - Responsible for joining brand, series, epispode, etc. into the TVA XML document 
+ : Given the ancestors sequence render all of the segments that make up the TVA XML
  :)
-declare function tva:assemble-segments($pid as xs:string, $cid as xs:string, $segments as element()* ) {
-  let $root as item()?  := doc(concat($glb:docStoreEndPoint,$pid))
-  let $parentPid as xs:string? := tvalib:get-parent-pid($root)
-  let $segment as element()* := insert-before($segments, 1, tva:render-segment($pid,$cid,$root/element()))
-  let $content as element()* := 
-    if ($parentPid) then tva:assemble-segments($parentPid,$cid,$segment)
-    else  $segment
-  return $content 
-};
+declare function tva:render-all-segments($ancestors as element()?) as element()? {
+  <ProgramDescription>
+    <ProgramInformationTable>
+    { episode:render-content(data($ancestors/episode/@pid),data($ancestors/episode/@cid),())
+      (: clip :) 
+    }
+    </ProgramInformationTable>
 
-(: 
- : Given the qualifying element, render accordingly  
- :)
-declare function tva:render-segment($pid as xs:string, $cid as xs:string, $e as element()?) as element()?{
-  typeswitch($e)
-  case element(ondemand) return ()
-  case element(version) return ()
-  case element(clip) return ()
-  case element(episode) return episode:render-content($pid, $cid, ())
-  case element(series) return series:render-content($pid, $cid, ())
-  case element(brand) return brand:render-content($pid, $cid, ())
-  default return ()
-};
+    <GroupInformationTable>
+    {  (: all three could be missing :)
+      brand:render-content(data($ancestors/brand/@pid), data($ancestors/brand/@cid),()), 
+      series:render-content(data($ancestors/series/@pid), data($ancestors/series/@cid),()),
+      series:render-content(data($ancestors/miniseries/@pid), data($ancestors/miniseries/@cid),())
+    }
+    </GroupInformationTable>
+    <ProgramLocationTable>
+    {(: version
+      : clip-version
+      :)
+    }
+    </ProgramLocationTable>
+   </ProgramDescription>  
+ };
+
+
 

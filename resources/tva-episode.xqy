@@ -2,7 +2,7 @@
 :)
 xquery version "1.0-ml";
 
-module namespace rest = "http://marklogic.com/rest-api/resource/tva-episode";
+module namespace rest = "http://marklogic.com/rest-api/resource/b2b-exporter-tva-episode";
 
 import module namespace episode = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-episode" at "/ext/b2b-exporter/modules/tva-episode.xqy";
 

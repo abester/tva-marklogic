@@ -1,0 +1,44 @@
+<series revision="220" pid="b0082ctt" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/" last_modified="2013-12-16T21:31:35Z" last_modified_supplier="rbm" stated_items="10">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/7459121"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/7459121</id>
+      <id type="pid" authority="pips">b0082ctt</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:brand" index="10" pid="b006mj59" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/"/>
+    </member_of>
+    <master_brand/>
+    <title>Series 10</title>
+    <synopses>
+      <synopsis length="short">More motoring hijinks, including guest appearances from Ronnie Wood and Jools Holland.</synopsis>
+      <synopsis length="medium">Motoring magazine show.</synopsis>
+    </synopses>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <stack/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/descendants/clips/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/siblings/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/rights_contracts/"/>
+    </links>
+  </series>

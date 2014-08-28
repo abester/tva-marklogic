@@ -1,0 +1,47 @@
+<series revision="14" pid="b0092h6c" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/" last_modified="2010-03-12T00:13:04Z" last_modified_supplier="rbm" stated_items="8">
+    <crid uri="crid://bbc.co.uk/b/8385883"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/8385883</id>
+      <id type="pid" authority="pips">b0092h6c</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:brand" index="3" pid="b006wym5" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006wym5/"/>
+    </member_of>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>Series 3</title>
+    <synopses>
+      <synopsis length="short">Drama series set in the sexy world of the luxury five star hotel.</synopsis>
+      <synopsis length="medium">Drama series set in the sexy world of the luxury five star hotel, on a journey beyond the facade of the smiling faces and glittering chandeliers and into the frenetic, non-stop world of the staff.</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00017" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00017/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <classifications/>
+    <stack/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/descendants/clips/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/siblings/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0092h6c/rights_contracts/"/>
+    </links>
+  </series>

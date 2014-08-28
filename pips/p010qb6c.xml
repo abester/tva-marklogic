@@ -1,0 +1,42 @@
+  <brand supplier_user="fuel" revision="1" pid="p010qb6c" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/" last_modified="2012-11-06T12:28:43Z" last_modified_supplier="fuel">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000013" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000013/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/p/29294361"/>
+    <ids>
+      <id type="crid" authority="pips">crid://bbc.co.uk/p/29294361</id>
+      <id type="interlink_id" authority="community_channel">cc::brand::5906</id>
+      <id type="pid" authority="pips">p010qb6c</id>
+    </ids>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="community_channel" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.community_channel/"/>
+    </master_brand>
+    <title>The Ardent Fruitcakes</title>
+    <synopses>
+      <synopsis length="short">Sample summary here.</synopsis>
+      <synopsis length="medium">Sample brand description here.</synopsis>
+    </synopses>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/descendants/clips/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p010qb6c/rights_contracts/"/>
+    </links>
+  </brand>
