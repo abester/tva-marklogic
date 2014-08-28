@@ -12,6 +12,6 @@ declare function rest:get($context as map:map, $params as map:map) as document-n
 
   let $output-types as map:map? := map:put($context,"output-types","application/xml") 
 
-  let $content as element()? := tva:render-content($pid, $cid, ())
+  let $content as element()? := tva:render-content($pid, $cid)
   return document {$content} 
 };

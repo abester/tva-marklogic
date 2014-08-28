@@ -26,10 +26,10 @@ declare function tvalib:get-parent-pid($root as item()?) as xs:string?{
 declare function tvalib:get-crid($ids as element()) as xs:string?{
   let $crid := $ids/id[@type='crid' and @authority='bds']
   return
-        if ($crid) then 
-        data($crid/text())
-        else 
-        data($ids/id[@type='crid' and @authority='pips']/text())
+    if ($crid) then 
+      data($crid/text())
+    else 
+      data($ids/id[@type='crid' and @authority='pips']/text())
 };
 
 (: 

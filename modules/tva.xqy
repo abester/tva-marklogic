@@ -12,7 +12,7 @@ import module namespace episode = "http://bbc.co.uk/psi/b2b-exporter/modules/tva
 (:  
  : Main Renderer -  Generates TVA XML  
  :)
-declare function tva:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
+declare function tva:render-content($pid as xs:string, $cid as xs:string) as element()? {
  
   let $ancestors := <ancestors>{tvalib:get-ancestors($pid,$cid,())}</ancestors>
   let $segments as element()* := tva:render-all-segments($ancestors)
