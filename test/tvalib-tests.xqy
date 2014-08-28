@@ -98,3 +98,19 @@ declare %test:case function shouldRenderOtherGenre(){
   let $expected as element() := <Genre href="{$glb:iplayerUrnPrefix}P1000" type="other" />
   return assert:equal(tvalib:render-other-genres($sourceGenres), $expected)
 };
+
+declare %test:case function get-parent-pid() {
+
+};
+
+declare %test:case function get-crid() {
+
+};
+
+declare %test:case function get-ancestors() {
+
+};
+
+declare %test:case function add-ancestor() {
+
+};
