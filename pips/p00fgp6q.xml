@@ -1,0 +1,49 @@
+
+  <clip supplier_user="silves06" revision="1" pid="p00fgp6q" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/" last_modified="2011-03-04T15:42:56Z" last_modified_supplier="iBroadcast">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <ids>
+      <id type="crid" authority="pips">crid://bbc.co.uk/p/12443237</id>
+      <id type="pid" authority="pips">p00fgp6q</id>
+    </ids>
+    <clip_of>
+      <link rel="pips-meta:episode" pid="b00zn9b2" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b00zn9b2/"/>
+    </clip_of>
+    <member_of_brand>
+      <link rel="pips-meta:brand" pid="b006r9ys" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006r9ys/"/>
+    </member_of_brand>
+    <master_brand/>
+    <title>Boyd Is Informed He Will Be Getting A New Team Member</title>
+    <synopses>
+      <synopsis length="short">Boyd has no choice but to accept a new member to his team, whatever her past may be.</synopsis>
+      <synopsis length="medium">Boyd's superiors make it clear that he has no choice but to accept a new member to his team despite hints of her traumatic past.</synopsis>
+      <synopsis length="long">Boyd's superiors make it clear that he has no choice but to accept a new member to his team despite hints of her traumatic past.</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00017" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00017/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+      </genre_group>
+      <genre_group genre_id="C00021" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00021/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100003" type="iplayer_toplevel">Drama</genre>
+        <genre genre_id="200018" type="iplayer_secondlevel">Crime</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <media_type value="audio_video"/>
+    <shoot_date/>
+    <links>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/siblings/"/>
+      <link rel="pips-meta:version-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/versions/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/rights_contracts/"/>
+    </links>
+  </clip>
