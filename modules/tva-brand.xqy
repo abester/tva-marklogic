@@ -9,7 +9,7 @@ import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tval
 (:  
  : Main Renderer -  Generates TVA Brand XML  
  :)
-declare function brand:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
+declare function brand:render-content($pid as xs:string?, $cid as xs:string?, $overide as element()?) as element()? {
 
   let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
 
