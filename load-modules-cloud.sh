@@ -11,12 +11,14 @@ unset http_proxy
 unset HTTP_PROXY
 
 # Credentials
-declare authentication="admin:admin"
+declare authentication="admin:password"
 
 # Server connection details
-declare host="http://localhost"
-declare port="8003"
+declare host="https://10.0.108.34"
+declare port="9991"
 
+#declare host="https://b2b-pusher-dnodes-ml.int.cloud.bbc.co.uk/v1"
+#declare port="80"
 
 #Allow for basic authentication
 declare cred_base64=$(printf $authentication | base64)
@@ -27,12 +29,13 @@ declare resource
 declare command
 declare commandResponse
 
-cd pips
-echo "Loading Pips Data..."
-for data in $(ls *.xml);
+cd modules
+echo "Loading Modules Data..."
+for data in $(ls *.xqy);
  do
-    resource="${data%.*}"
-    curl -X PUT -w %{http_code} -H "Content-type: application/xml" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1/documents?uri=$resource&collection=pips"\
+    resource="/ext/b2b-exporter/modules/$data"
+  
+     curl --socks5-hostname 127.0.0.1:4332 -k -E /Users/bestea02/work/cert/userkey.pem --cacert /Users/bestea02/work/cert/ca-bundle.pem -X PUT -w %{http_code} -H  "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource"\
      && ((counter++))
     echo " <response [$counter] Stored $data at URI:$resource";
 done;

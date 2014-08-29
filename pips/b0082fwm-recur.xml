@@ -1,4 +1,4 @@
-<episode revision="10" pid="b0082fwm" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/" last_modified="2012-01-14T18:03:17Z" last_modified_supplier="rbm">
+<episode revision="10" pid="b0082fwm" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b0082fwm/" last_modified="2012-01-14T18:03:17Z" last_modified_supplier="rbm" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
     <partner>
       <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
     </partner>
@@ -9,7 +9,7 @@
       <id type="uid" authority="onair">ENEA692A</id>
     </ids>
     <member_of>
-      <link rel="pips-meta:series" index="2" pid="b0082ctt" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/"/>
+      <link rel="pips-meta:series" index="2" pid="b0082ctt-recur" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b0082ctt/"/>
     </member_of>
     <member_of_brand>
       <link rel="pips-meta:brand" pid="b006mj59" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b006mj59/"/>

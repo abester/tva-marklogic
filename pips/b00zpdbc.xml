@@ -1,4 +1,4 @@
-<series supplier_user="murphj11" last_modified="2011-03-15T16:15:43Z" stated_items="10" revision="2" pid="b00zpdbc" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdbc/" last_modified_supplier="ram">
+<series supplier_user="murphj11" last_modified="2011-03-15T16:15:43Z" stated_items="10" revision="2" pid="b00zpdbc" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.b00zpdbc/" last_modified_supplier="ram" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
     <partner>
       <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
     </partner>

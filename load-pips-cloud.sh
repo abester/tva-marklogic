@@ -14,7 +14,7 @@ unset HTTP_PROXY
 declare authentication="admin:password"
 
 # Server connection details
-declare host="https://10.0.107.192"
+declare host="https://10.0.108.34"
 declare port="9991"
 
 #declare host="https://b2b-pusher-dnodes-ml.int.cloud.bbc.co.uk/v1"
@@ -33,11 +33,11 @@ cd pips
 echo "Loading Pips Data..."
 for data in $(ls *.xml);
  do
-    resource="/pips/${data%.*}"
+    resource="${data%.*}"
     #--socks5-hostname 127.0.0.1:4332
     curl --socks5-hostname 127.0.0.1:4332 -k -E /Users/bestea02/work/cert/userkey.pem --cacert /Users/bestea02/work/cert/ca-bundle.pem -X PUT -w %{http_code} -H "Content-type: application/xml" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1/documents?uri=$resource&collection=pips"\
      && ((counter++))
-    echo " <response [$counter] Stored $data at URI: $resource";
+    echo " <response [$counter] Stored $data at URI:$resource";
 done;
 
 exit 0;

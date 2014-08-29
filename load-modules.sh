@@ -32,7 +32,7 @@ for data in $(ls *.xqy);
     resource="/ext/b2b-exporter/modules/$data"
     curl -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource" \
      && ((counter++))
-    echo -e " <response [$counter] Loaded $data into modules store at URI: $resource";
+    echo -e " <response [$counter] Loaded $data into modules store at URI:$resource";
 done;
 
 echo -e "\nTo view all modules: $connection/v1/ext/"

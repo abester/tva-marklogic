@@ -1,0 +1,47 @@
+<brand supplier_user="sam.bailey@bbc.co.uk" last_modified="2014-08-21T14:53:08Z" supplier_group="Vision" revision="2" pid="p02546jz" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/" last_modified_supplier="ibroadcast2" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/p/62001364"/>
+    <ids>
+      <id type="crid" authority="pips">crid://bbc.co.uk/p/62001364</id>
+      <id type="pid" authority="pips">p02546jz</id>
+    </ids>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>Doctor Who Extra</title>
+    <synopses>
+      <synopsis length="short">Unprecedented access to the making of Doctor Who... it's the ultimate backstage pass!</synopsis>
+      <synopsis length="medium">Doctor Who Extra brings you unprecedented access to the making of Doctor Who... Featuring interviews with Peter Capaldi and Jenna Coleman, it's the ultimate backstage pass!</synopsis>
+      <synopsis length="long">Doctor Who Extra brings you unprecedented access to the making of Doctor Who... Featuring interviews with Peter Capaldi and Jenna Coleman, it's the ultimate backstage pass!</synopsis>
+    </synopses>
+    <genres>
+      <genre_group genre_id="C00046" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00046/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100005" type="iplayer_toplevel">Factual</genre>
+        <genre genre_id="200041" type="iplayer_secondlevel">Arts, Culture &amp; the Media</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <classifications/>
+    <filename_template/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/descendants/"/>
+      <link rel="pips-meta:series-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/children/series/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/children/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/children/clips/"/>
+      <link rel="pips-meta:episode-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/descendants/episodes/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/descendants/clips/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/rights_contracts/"/>
+    </links>
+  </brand>

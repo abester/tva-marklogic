@@ -13,7 +13,7 @@ declare %test:case function shouldRenderRequiredIds(){
   let $pid  as xs:string := "b00zpdc9"
 
   let $sourceSeries as element() := 
-    <brand>
+    <brand xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <ids>
        <id type="crid" authority="pips">{$crid}</id>
        <id type="pid" authority="pips">{$pid}</id>
@@ -34,12 +34,12 @@ declare %test:case function shouldRenderParentSeries(){
   let $parentPid as xs:string := "b00zpdc9"
   let $parentCrid as xs:string := "crid://bbc.co.uk/b/28343123"
   let $sourceMiniSeries as element() := 
-   <member_of>
+   <member_of xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <link rel="pips-meta:series" index="1" pid="{$parentPid}"></link>
    </member_of>
 
   let $sourceSeries as element() := 
-  <series pid="{$parentPid}">
+  <series pid="{$parentPid}" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <crid uri="{$parentCrid}">
     </crid>
   </series>
@@ -57,12 +57,12 @@ declare %test:case function shouldRenderParentBrand(){
   let $parentPid as xs:string := "b00zpdc9"
   let $parentCrid as xs:string := "crid://bbc.co.uk/b/28343123"
   let $sourceSeries as element() := 
-   <member_of>
+   <member_of xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <link rel="pips-meta:brand" index="1" pid="{$parentPid}"></link>
    </member_of>
 
   let $sourceBrand as element() := 
-  <brand pid="{$parentPid}">
+  <brand pid="{$parentPid}" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <crid uri="{$parentCrid}">
     </crid>
   </brand>

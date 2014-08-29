@@ -12,12 +12,11 @@ unset http_proxy
 unset HTTP_PROXY
 
 # Credentials
-declare authentication="admin:admin"
+declare authentication="admin:password"
 
 # Server connection details
-declare host="http://localhost"
-declare port="8003"
-
+declare host="https://10.0.108.34"
+declare port="9991"
 
 #Allow for basic authentication
 declare cred_base64=$(printf $authentication | base64)
@@ -33,7 +32,7 @@ for data in $(ls *.xqy);
     metadata=$(head -1 $data | cut -c 3-)
     echo $firstLine
     resource="/v1/config/resources/b2b-exporter-${data%.*}"
-    curl -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection$resource$metadata" \
+    curl --socks5-hostname 127.0.0.1:4332 -k -E /Users/bestea02/work/cert/userkey.pem --cacert /Users/bestea02/work/cert/ca-bundle.pem -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection$resource$metadata" \
      && ((counter++))
     echo -e " <response [$counter] Loaded $data into modules store at URI:$resource";
 done;

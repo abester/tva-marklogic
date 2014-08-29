@@ -1,0 +1,52 @@
+<episode supplier_user="Andrew.Booth2@bbc.co.uk" last_modified="2014-08-28T10:56:43Z" supplier_group="Boothies" revision="6" pid="p025475q" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/" last_modified_supplier="ibroadcast2" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/p/62001977"/>
+    <ids>
+      <id type="crid" authority="pips">crid://bbc.co.uk/p/62001977</id>
+      <id type="pid" authority="pips">p025475q</id>
+      <id type="uid" authority="onair">DRAD422F</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:series" index="1" pid="p025k4rs" href="https://api.live.bbc.co.uk/pips/api/v1/series/pid.p025k4rs/"/>
+    </member_of>
+    <member_of_brand>
+      <link rel="pips-meta:brand" pid="p02546jz" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.p02546jz/"/>
+    </member_of_brand>
+    <master_brand/>
+    <title>Deep Breath</title>
+    <containers_title>Doctor Who Extra; Series 1; Deep Breath</containers_title>
+    <presentation_title></presentation_title>
+    <release_date/>
+    <uri/>
+    <synopses>
+      <synopsis length="short">A new series and a new Doctor, could a trip behind the scenes be any more exciting?</synopsis>
+      <synopsis length="medium">A new series, a new costume and a new Doctor! Take a Deep Breath and go behind the scenes on the first episode starring Peter Capaldi as the Twelfth Doctor.</synopsis>
+      <synopsis length="long">A new series, a new costume and a new Doctor! Take a Deep Breath and go behind the scenes on the first episode starring Peter Capaldi as the Twelfth Doctor.</synopsis>
+    </synopses>
+    <genres/>
+    <formats/>
+    <classifications/>
+    <media_type value="audio_video"/>
+    <filename_template/>
+    <origination/>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/descendants/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/siblings/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/children/clips/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/descendants/clips/"/>
+      <link rel="pips-meta:version-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/versions/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.p025475q/rights_contracts/"/>
+    </links>
+  </episode>

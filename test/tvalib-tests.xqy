@@ -13,13 +13,14 @@ declare private variable $sourceSynopsesShort := "The heroes are entangled";
 declare private variable $sourceSynopsesMedium := "Drama series. The heroes face a race against time.";
 declare private variable $sourceSynopsesLong := "Despite their newfound fame. With the hopes and life.";
 
-declare private variable $sourceSynopses as element() := <episode>
-  <synopses>
-    <synopsis length="short">{$sourceSynopsesShort}</synopsis>
-    <synopsis length="medium">{$sourceSynopsesMedium}</synopsis>
-    <synopsis length="long">{$sourceSynopsesLong}</synopsis>
-  </synopses>
- </episode>;
+declare private variable $sourceSynopses as element() := 
+  <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
+    <synopses>
+      <synopsis length="short">{$sourceSynopsesShort}</synopsis>
+      <synopsis length="medium">{$sourceSynopsesMedium}</synopsis>
+      <synopsis length="long">{$sourceSynopsesLong}</synopsis>
+    </synopses>
+  </episode>;
 
 declare %test:case function shouldRenderTitle(){
   let $title as xs:string := "!Girl By Any Other Name"
@@ -27,7 +28,7 @@ declare %test:case function shouldRenderTitle(){
   let $presentation_title as xs:string := "Episode 2"
 
   let $sourceEpisode as element() := 
-     <episode>
+     <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
      <title>{$title}</title>
      <containers_title>Atlantis</containers_title>
      <presentation_title>{$presentation_title}</presentation_title>
@@ -65,7 +66,7 @@ declare %test:case function shouldRenderLongSynopsis(){
 
 declare %test:case function shouldRenderIplayerGenre(){
   let $sourceGenres as element() := 
-   <episode>
+   <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <genres>
         <genre_group genre_id="C00035" type="iplayer_composite"><genre/><genre/></genre_group>
       </genres>
@@ -77,7 +78,7 @@ declare %test:case function shouldRenderIplayerGenre(){
 
 declare %test:case function shouldNotRenderIplayerGenre(){
   let $sourceGenres as element() := 
-   <episode>
+   <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <genres>
         <genre_group genre_id="C00035" type="broadCast"><genre/><genre/></genre_group>
       </genres>
@@ -89,7 +90,7 @@ declare %test:case function shouldNotRenderIplayerGenre(){
 
 declare %test:case function shouldRenderOtherGenre(){
   let $sourceGenres as element() := 
-   <episode>
+   <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <formats>
         <format format_id="P1000" type="other"></format>
       </formats>
@@ -100,17 +101,70 @@ declare %test:case function shouldRenderOtherGenre(){
 };
 
 declare %test:case function get-parent-pid() {
-
+  <todo></todo>
 };
 
 declare %test:case function get-crid() {
-
+  <todo></todo>
 };
 
 declare %test:case function get-ancestors() {
-
+  <todo></todo>
 };
 
-declare %test:case function add-ancestor() {
+declare %test:case function shouldRenderAllElementsWhenCallingAddAncestor() {
+  let $pid as xs:string := "b013pqnm"
+  let $cid as xs:string := "3434234234"
 
+  let $srcOndemand as element() := <ondemand xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></ondemand>
+  let $resultOndemand as element() := tvalib:add-ancestor($pid, $cid, $srcOndemand)
+
+  let $srcVersion as element() := <version xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></version>
+  let $resultVersion as element() := tvalib:add-ancestor($pid, $cid, $srcVersion)
+
+  let $srcClip as element() := <clip xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></clip>
+  let $resultClip as element() := tvalib:add-ancestor($pid, $cid, $srcClip)
+
+  let $srcEpisode as element() := <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></episode>
+  let $resultEpisode as element() := tvalib:add-ancestor($pid, $cid, $srcEpisode)
+
+  let $srcSeries as element() := <series xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></series>
+  let $resultSeries as element() := tvalib:add-ancestor($pid, $cid, $srcSeries)
+
+  let $srcMiniSeries as element() := <series xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"><member_of><link rel="pips-meta:series"/></member_of></series>
+  let $resultMiniSeries as element() := tvalib:add-ancestor($pid, $cid, $srcMiniSeries)
+
+  let $srcBrand as element() := <brand xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips"></brand>
+  let $resultBrand as element() := tvalib:add-ancestor($pid, $cid, $srcBrand)
+
+  return (
+    assert:equal(data($resultOndemand/name()), "ondemand"),
+    assert:equal(data($resultOndemand/@pid), $pid),
+    assert:equal(data($resultOndemand/@cid), $cid),
+
+    assert:equal(data($resultVersion/name()), "version"),
+    assert:equal(data($resultVersion/@pid), $pid),
+    assert:equal(data($resultVersion/@cid), $cid),
+
+    assert:equal(data($resultClip/name()), "clip"),
+    assert:equal(data($resultClip/@pid), $pid),
+    assert:equal(data($resultClip/@cid), $cid),
+
+    assert:equal(data($resultEpisode/name()), "episode"),
+    assert:equal(data($resultEpisode/@pid), $pid),
+    assert:equal(data($resultEpisode/@cid), $cid),
+
+    assert:equal(data($resultSeries/name()), "series"),
+    assert:equal(data($resultSeries/@pid), $pid),
+    assert:equal(data($resultSeries/@cid), $cid),
+
+    assert:equal(data($resultMiniSeries/name()), "miniseries"),
+    assert:equal(data($resultMiniSeries/@pid), $pid),
+    assert:equal(data($resultMiniSeries/@cid), $cid),
+
+    assert:equal(data($resultBrand/name()), "brand"),
+    assert:equal(data($resultBrand/@pid), $pid),
+    assert:equal(data($resultBrand/@cid), $cid)
+
+    )
 };

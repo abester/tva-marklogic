@@ -13,7 +13,7 @@ declare private variable $sourceSynopsesMedium as xs:string := "Drama series. Th
 declare private variable $sourceSynopsesLong as xs:string := "Despite their newfound fame. With the hopes and life.";
 
 declare private variable $sourceSynopses as element() := 
-  <episode>
+  <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <synopses>
       <synopsis length="short">{$sourceSynopsesShort}</synopsis>
       <synopsis length="medium">{$sourceSynopsesMedium}</synopsis>
@@ -27,7 +27,7 @@ declare %test:case function shouldRenderRequiredIds(){
   let $uid  as xs:string := "DRRB202X"
 
   let $sourceEpisode as element() := 
-    <episode>
+    <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <ids>
        <id type="crid" authority="pips">{$crid}</id>
        <id type="pid" authority="pips">{$pid}</id>
@@ -47,7 +47,7 @@ declare %test:case function shouldRenderRequiredIds(){
 declare %test:case function shouldRenderLanguage(){
  let $language as xs:string := "EN"
   let $sourceEpisode as element() := 
-    <episode>
+    <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <languages>
         <language>{$language}</language>
       </languages>
@@ -63,7 +63,7 @@ declare %test:case function shouldRenderLanguage(){
 declare %test:case function shouldRenderReleaseYear(){
   let $year as xs:string := "2013"
   let $sourceEpisode as element() := 
-   <episode>
+   <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <release_date month="10" day="5" year="{$year}"/>
    </episode>
   
@@ -77,12 +77,12 @@ declare %test:case function shouldRenderParentSeries(){
   let $parentPid as xs:string := "b00zpdc9"
   let $parentCrid as xs:string := "crid://bbc.co.uk/b/28343123"
   let $sourceEpisode as element() := 
-   <member_of>
+   <member_of xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <link rel="pips-meta:series" index="1" pid="{$parentPid}"></link>
    </member_of>
 
   let $sourceSeries as element() := 
-  <series pid="{$parentPid}">
+  <series pid="{$parentPid}" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
     <crid uri="{$parentCrid}">
     </crid>
   </series>

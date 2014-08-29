@@ -34,7 +34,7 @@ for data in $(find . -type f | grep '.xqy');
     resource="/ext/xquery/xray/$extension"
     curl -X PUT -w %{http_code} -H "Content-type: application/xquery" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource" \
      && ((counter++))
-    echo -e " <response [$counter] Loaded $extension into modules store at URI: $resource";
+    echo -e " <response [$counter] Loaded $extension into modules store at URI:$resource";
 done;
 
 echo "Loading xray 'xsd','xsl'..."
@@ -44,7 +44,7 @@ for data in $(find . -type f | grep '.xsd\|.xsl');
     resource="/ext/xquery/xray/$extension"
     curl -X PUT -w %{http_code} -H "Content-type: application/xslt+xml" -H "Authorization: Basic $cred_base64" -T $data "$connection/v1$resource" \
      && ((counter++))
-    echo -e " <response [$counter] Loaded $extension into modules store at URI: $resource";
+    echo -e " <response [$counter] Loaded $extension into modules store at URI:$resource";
 done;
 
 echo -e "\nTo view all modules: $connection/v1/ext/"

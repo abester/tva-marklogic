@@ -13,7 +13,7 @@ declare %test:case function shouldRenderRequiredIds(){
   let $pid  as xs:string := "p00fgp6q"
 
   let $sourceClip as element() := 
-    <clip>
+    <clip xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <ids>
        <id type="crid" authority="pips">{$crid}</id>
        <id type="pid" authority="pips">{$pid}</id>
@@ -35,7 +35,7 @@ declare %test:case function shouldRenderTitle(){
   let $title as xs:string := "Boyd Is Informed He Will Be Getting A New Team Member"
 
   let $sourceClip as element() := 
-    <clip>
+    <clip xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
       <title>{$title}</title>
     </clip>
   

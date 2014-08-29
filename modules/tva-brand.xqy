@@ -2,19 +2,21 @@ xquery version "1.0-ml";
 
 (:/ext/b2b-exporter/modules/tva-brand.xqy :)
 module namespace brand = "http://bbc.co.uk/psi/b2b-exporter/modules/tva-brand";
-    
+
+declare namespace p = "http://ns.webservices.bbc.co.uk/2006/02/pips";
+
 import module namespace glb = "http://bbc.co.uk/psi/b2b-exporter/modules/globals" at "/ext/b2b-exporter/modules/globals.xqy";
 import module namespace tvalib = "http://bbc.co.uk/psi/b2b-exporter/modules/tvalib" at "/ext/b2b-exporter/modules/tvalib.xqy";
 
 (:  
  : Main Renderer -  Generates TVA Brand XML  
  :)
-declare function brand:render-content($pid as xs:string?, $cid as xs:string?, $overide as element()?) as element()? {
+declare function brand:render-content($pid as xs:string, $cid as xs:string, $overide as element()?) as element()? {
 
   let $root as element()? := if (empty($overide)) then doc(concat($glb:docStoreEndPoint,$pid))/element() else $overide
 
-  let $pid  as xs:string? := $root/ids/id[@type='pid' and @authority='pips']/text()
-  let $crid as xs:string? := tvalib:get-crid($root/ids)
+  let $pid  as xs:string? := $root/p:ids/p:id[@type='pid' and @authority='pips']/text()
+  let $crid as xs:string? := tvalib:get-crid($root/p:ids)
 
   let $content as element()? := 
   if (empty ($root)) then ()

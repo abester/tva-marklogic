@@ -1,5 +1,5 @@
 
-  <clip supplier_user="silves06" revision="1" pid="p00fgp6q" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/" last_modified="2011-03-04T15:42:56Z" last_modified_supplier="iBroadcast">
+  <clip supplier_user="silves06" revision="1" pid="p00fgp6q" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/clip/pid.p00fgp6q/" last_modified="2011-03-04T15:42:56Z" last_modified_supplier="iBroadcast" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
     <partner>
       <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
     </partner>

@@ -1,4 +1,4 @@
- <episode revision="2" pid="b00zn9b2" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b00zn9b2/" last_modified="2012-07-17T20:04:25Z" last_modified_supplier="rbm">
+ <episode revision="2" pid="b00zn9b2" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b00zn9b2/" last_modified="2012-07-17T20:04:25Z" last_modified_supplier="rbm" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
     <partner>
       <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
     </partner>

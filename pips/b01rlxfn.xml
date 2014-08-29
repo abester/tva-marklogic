@@ -1,0 +1,64 @@
+<episode revision="8" pid="b01rlxfn" embargoed="false" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/" last_modified="2014-07-30T11:34:07Z" last_modified_supplier="rbm" xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes">
+    <partner>
+      <link rel="pips-meta:partner" pid="s0000001" href="https://api.live.bbc.co.uk/pips/api/v1/partner/pid.s0000001/"/>
+    </partner>
+    <crid uri="crid://bbc.co.uk/b/50433703"/>
+    <ids>
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/50433703</id>
+      <id type="pid" authority="pips">b01rlxfn</id>
+      <id type="uid" authority="onair">FKIP705L</id>
+    </ids>
+    <member_of>
+      <link rel="pips-meta:brand" index="6" pid="b013pqnm" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b013pqnm/"/>
+    </member_of>
+    <member_of_brand>
+      <link rel="pips-meta:brand" pid="b013pqnm" href="https://api.live.bbc.co.uk/pips/api/v1/brand/pid.b013pqnm/"/>
+    </member_of_brand>
+    <master_brand>
+      <link rel="pips-meta:master_brand" mid="bbc_one" href="https://api.live.bbc.co.uk/pips/api/v1/master_brand/mid.bbc_one/"/>
+    </master_brand>
+    <title>Easter Masterclass</title>
+    <containers_title>The Great British Bake Off</containers_title>
+    <presentation_title>26/03/2013</presentation_title>
+    <release_date month="3" day="26" year="2013"/>
+    <uri/>
+    <synopses>
+      <synopsis length="short">Making hot cross buns, simnel cake, chocolate custard tarts and a lemon meringue nest.</synopsis>
+      <synopsis length="medium">Mary Berry and Paul Hollywood demonstrate how to make the ultimate hot cross buns, a classic simnel cake, delicious chocolate custard tarts and a lemon meringue nest.</synopsis>
+      <synopsis length="long">Join The Great British Bake Off judges Mary Berry and Paul Hollywood as they showcase some of their favourite Easter recipes. 
+
+In a step-by-step guide, Mary and Paul will show you how to make the ultimate hot cross buns, a classic simnel cake, delicious chocolate custard tarts and a lemon meringue nest.</synopsis>
+    </synopses>
+    <languages>
+      <language>EN</language>
+    </languages>
+    <genres>
+      <genre_group genre_id="C00057" revision="1" href="https://api.live.bbc.co.uk/pips/api/v1/genre/genre_id.C00057/" last_modified="2008-10-06T11:01:48Z" type="iplayer_composite" last_modified_supplier="pips">
+        <genre genre_id="100005" type="iplayer_toplevel">Factual</genre>
+        <genre genre_id="200052" type="iplayer_secondlevel">Food &amp; Drink</genre>
+      </genre_group>
+    </genres>
+    <formats/>
+    <classifications/>
+    <media_type value="audio_video"/>
+    <filename_template/>
+    <origination>independent</origination>
+    <links>
+      <link rel="pips-meta:broadcast-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/broadcasts/"/>
+      <link rel="pips-meta:availability_trigger-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/availability_triggers/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/descendants/"/>
+      <link rel="pips-meta:mixed-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/siblings/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/children/clips/"/>
+      <link rel="pips-meta:clip-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/descendants/clips/"/>
+      <link rel="pips-meta:version-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/versions/"/>
+      <link rel="pips-meta:membership-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/member_in/"/>
+      <link rel="pips-meta:related_link-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/related_links/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/promotions/"/>
+      <link rel="pips-meta:promotion-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/promotions_on/"/>
+      <link rel="pips-meta:tagging-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/taggings/"/>
+      <link rel="pips-meta:relationship-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/relationships/"/>
+      <link rel="pips-meta:contribution-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/contributions/"/>
+      <link rel="pips-meta:change-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/changes/"/>
+      <link rel="pips-meta:rights_contract-resultset" href="https://api.live.bbc.co.uk/pips/api/v1/episode/pid.b01rlxfn/rights_contracts/"/>
+    </links>
+  </episode>
