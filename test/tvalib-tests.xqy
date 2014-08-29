@@ -1,6 +1,9 @@
 xquery version "1.0-ml";
 
 module namespace test = "http://github.com/robwhitby/xray/test";
+
+declare namespace p = "http://ns.webservices.bbc.co.uk/2006/02/pips";
+
 import module namespace assert = "http://github.com/robwhitby/xray/assertions" at "/ext/xquery/xray/src/assertions.xqy";
 
 import module namespace glb = "http://bbc.co.uk/psi/b2b-exporter/modules/globals" at "/ext/b2b-exporter/modules/globals.xqy";
@@ -47,19 +50,19 @@ declare %test:case function shouldRenderTitle(){
 };
 
 declare %test:case function shouldRenderShortSynopsis(){
-  let $synopsisType := "short"
+  let $synopsisType  as xs:string := "short"
   let $expected as element() := <Synopsis xml:lang="en-GB" length="{$synopsisType}" xmlns="">{$sourceSynopsesShort}</Synopsis>
   return assert:equal(tvalib:render-synopses($sourceSynopses, $synopsisType), $expected)
 };
 
 declare %test:case function shouldRenderMediumSynopsis(){
-  let $synopsisType := "medium"
+  let $synopsisType  as xs:string  := "medium"
   let $expected as element() := <Synopsis xml:lang="en-GB" length="{$synopsisType}" xmlns="">{$sourceSynopsesMedium}</Synopsis>
   return assert:equal(tvalib:render-synopses($sourceSynopses, $synopsisType), $expected)
 };
 
 declare %test:case function shouldRenderLongSynopsis(){
-  let $synopsisType := "long"
+  let $synopsisType  as xs:string  := "long"
   let $expected as element() := <Synopsis xml:lang="en-GB" length="{$synopsisType}" xmlns="">{$sourceSynopsesLong}</Synopsis>
   return assert:equal(tvalib:render-synopses($sourceSynopses, $synopsisType), $expected)
 };
@@ -100,88 +103,71 @@ declare %test:case function shouldRenderOtherGenre(){
   return assert:equal(tvalib:render-other-genres($sourceGenres), $expected)
 };
 
-<<<<<<< HEAD
-declare %test:case function get-parent-pid() {
-  <todo></todo>
-};
-
-declare %test:case function get-crid() {
-  <todo></todo>
-=======
 declare %test:case function shouldGetBroadcastOf() {
-  let $parentPid := "b00zpdc9"
-  let $ondemandDoc :=
-    <pips>
-      <ondemand>
+  let $parentPid  as xs:string := "b00zpdc9"
+  let $ondemandDoc as item() := 
+      <pips><ondemand xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <broadcast_of>
           <link pid="{$parentPid}" />
         </broadcast_of>
-      </ondemand>
-    </pips>
-  let $result := tvalib:get-parent-pid($ondemandDoc)
-  return assert:equal($result, $parentPid)
+      </ondemand></pips>
+      
+  let $result as xs:string := tvalib:get-parent-pid($ondemandDoc)
+  return (
+   
+    assert:equal(data($result), data($parentPid))
+    )
 };
 
 declare %test:case function shouldGetVersionOf() {
-  let $parentPid := "b00zpdc9"
-  let $versionDoc :=
-    <pips>
-      <version>
+  let $parentPid as xs:string := "b00zpdc9"
+  let $versionDoc as item() :=
+      <pips><version xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <version_of>
           <link pid="{$parentPid}" />
         </version_of>
-      </version>
-    </pips>
-  let $result := tvalib:get-parent-pid($versionDoc)
-  return assert:equal($result, $parentPid)
+      </version></pips>
+  let $result as xs:string := tvalib:get-parent-pid($versionDoc)
+  return assert:equal(data($result), $parentPid)
 };
 
 declare %test:case function shouldGetClipOf() {
-  let $parentPid := "b00zpdc9"
-  let $clipDoc :=
-    <pips>
-      <clip>
+  let $parentPid as xs:string := "b00zpdc9"
+  let $clipDoc as element() :=
+      <pips><clip xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <clip_of>
           <link pid="{$parentPid}" />
         </clip_of>
-      </clip>
-    </pips>
-  let $result := tvalib:get-parent-pid($clipDoc)
+      </clip></pips>
+  let $result as xs:string := tvalib:get-parent-pid($clipDoc)
   return assert:equal($result, $parentPid)
 };
 
 declare %test:case function shouldGetMemberOf() {
-  let $parentPid := "b00zpdc9"
-  let $episodeDoc :=
-    <pips>
-      <episode>
+  let $parentPid  as xs:string := "b00zpdc9"
+  let $episodeDoc as element() :=
+      <episode xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <member_of>
           <link pid="{$parentPid}" />
         </member_of>
       </episode>
-    </pips>
-  
-  let $seriesDoc :=
-    <pips>
-      <series>
+   
+  let $seriesDoc as element() :=
+      <series xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <member_of>
           <link pid="{$parentPid}" />
         </member_of>
       </series>
-    </pips>
-  
-  let $brandDoc :=
-    <pips>
-      <brand>
+    
+  let $brandDoc as element() :=
+      <brand xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
         <member_of>
           <link pid="{$parentPid}" />
         </member_of>
       </brand>
-    </pips>
-
-  let $episodeResult := tvalib:get-parent-pid($episodeDoc)
-  let $seriesResult := tvalib:get-parent-pid($seriesDoc)
-  let $brandResult := tvalib:get-parent-pid($brandDoc)
+  let $episodeResult as xs:string := tvalib:get-parent-pid($episodeDoc)
+  let $seriesResult as xs:string  := tvalib:get-parent-pid($seriesDoc)
+  let $brandResult as xs:string  := tvalib:get-parent-pid($brandDoc)
 
   return ( assert:equal($episodeResult, $parentPid),
            assert:equal($seriesResult, $parentPid),
@@ -189,19 +175,18 @@ declare %test:case function shouldGetMemberOf() {
 };
 
 declare %test:case function shouldGetBdsCrid_1() {
-  let $bdsCrid := "crid://bbc.co.uk/b/3284630"
-  let $ids := <ids>
+  let $bdsCrid as xs:string := "crid://bbc.co.uk/b/3284630"
+  let $ids as element() := <ids xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
                 <id type="crid" authority="bds">{$bdsCrid}</id>
               </ids>
   let $result := tvalib:get-crid($ids)
   return assert:equal($result, $bdsCrid)
->>>>>>> 00997476d1a9501ba18b3d43bb22e6ae4c0dd575
 };
 
 declare %test:case function shouldGetBdsCrid_2() {
-  let $pipsCrid := "crid://bbc.co.uk/b/6122695"
-  let $bdsCrid := "crid://bbc.co.uk/b/3284630"
-  let $ids := <ids>
+  let $pipsCrid as xs:string := "crid://bbc.co.uk/b/6122695"
+  let $bdsCrid  as xs:string := "crid://bbc.co.uk/b/3284630"
+  let $ids as element() := <ids xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
                 <id type="crid" authority="pips">{$pipsCrid}</id>
                 <id type="crid" authority="bds">{$bdsCrid}</id>
               </ids>
@@ -210,11 +195,11 @@ declare %test:case function shouldGetBdsCrid_2() {
 };
 
 declare %test:case function shouldGetPipsCrid() {
-  let $pipsCrid := "crid://bbc.co.uk/b/6122695"
-  let $ids := <ids>
+  let $pipsCrid  as xs:string := "crid://bbc.co.uk/b/6122695"
+  let $ids as element() := <ids xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips">
                 <id type="crid" authority="pips">{$pipsCrid}</id>
               </ids>
-  let $result := tvalib:get-crid($ids)
+  let $result as xs:string := tvalib:get-crid($ids)
   return assert:equal($result, $pipsCrid)
 };
 
