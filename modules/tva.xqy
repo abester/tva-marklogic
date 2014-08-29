@@ -22,7 +22,7 @@ declare function tva:render-content($pid as xs:string, $cid as xs:string) as ele
     if (empty ($segments)) then ()
     else
       <TVAMain xml:lang="{$glb:locale}" xmlns="urn:tva:metadata:2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mpeg7="urn:tva:mpeg7:2008">
-        {$ancestors, $segments}
+        {$segments}
       </TVAMain>
   return $content
 };
