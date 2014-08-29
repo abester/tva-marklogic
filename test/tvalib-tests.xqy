@@ -100,13 +100,124 @@ declare %test:case function shouldRenderOtherGenre(){
   return assert:equal(tvalib:render-other-genres($sourceGenres), $expected)
 };
 
+<<<<<<< HEAD
 declare %test:case function get-parent-pid() {
   <todo></todo>
 };
 
 declare %test:case function get-crid() {
   <todo></todo>
+=======
+declare %test:case function shouldGetBroadcastOf() {
+  let $parentPid := "b00zpdc9"
+  let $ondemandDoc :=
+    <pips>
+      <ondemand>
+        <broadcast_of>
+          <link pid="{$parentPid}" />
+        </broadcast_of>
+      </ondemand>
+    </pips>
+  let $result := tvalib:get-parent-pid($ondemandDoc)
+  return assert:equal($result, $parentPid)
 };
+
+declare %test:case function shouldGetVersionOf() {
+  let $parentPid := "b00zpdc9"
+  let $versionDoc :=
+    <pips>
+      <version>
+        <version_of>
+          <link pid="{$parentPid}" />
+        </version_of>
+      </version>
+    </pips>
+  let $result := tvalib:get-parent-pid($versionDoc)
+  return assert:equal($result, $parentPid)
+};
+
+declare %test:case function shouldGetClipOf() {
+  let $parentPid := "b00zpdc9"
+  let $clipDoc :=
+    <pips>
+      <clip>
+        <clip_of>
+          <link pid="{$parentPid}" />
+        </clip_of>
+      </clip>
+    </pips>
+  let $result := tvalib:get-parent-pid($clipDoc)
+  return assert:equal($result, $parentPid)
+};
+
+declare %test:case function shouldGetMemberOf() {
+  let $parentPid := "b00zpdc9"
+  let $episodeDoc :=
+    <pips>
+      <episode>
+        <member_of>
+          <link pid="{$parentPid}" />
+        </member_of>
+      </episode>
+    </pips>
+  
+  let $seriesDoc :=
+    <pips>
+      <series>
+        <member_of>
+          <link pid="{$parentPid}" />
+        </member_of>
+      </series>
+    </pips>
+  
+  let $brandDoc :=
+    <pips>
+      <brand>
+        <member_of>
+          <link pid="{$parentPid}" />
+        </member_of>
+      </brand>
+    </pips>
+
+  let $episodeResult := tvalib:get-parent-pid($episodeDoc)
+  let $seriesResult := tvalib:get-parent-pid($seriesDoc)
+  let $brandResult := tvalib:get-parent-pid($brandDoc)
+
+  return ( assert:equal($episodeResult, $parentPid),
+           assert:equal($seriesResult, $parentPid),
+           assert:equal($brandResult, $parentPid) )
+};
+
+declare %test:case function shouldGetBdsCrid_1() {
+  let $bdsCrid := "crid://bbc.co.uk/b/3284630"
+  let $ids := <ids>
+                <id type="crid" authority="bds">{$bdsCrid}</id>
+              </ids>
+  let $result := tvalib:get-crid($ids)
+  return assert:equal($result, $bdsCrid)
+>>>>>>> 00997476d1a9501ba18b3d43bb22e6ae4c0dd575
+};
+
+declare %test:case function shouldGetBdsCrid_2() {
+  let $pipsCrid := "crid://bbc.co.uk/b/6122695"
+  let $bdsCrid := "crid://bbc.co.uk/b/3284630"
+  let $ids := <ids>
+                <id type="crid" authority="pips">{$pipsCrid}</id>
+                <id type="crid" authority="bds">{$bdsCrid}</id>
+              </ids>
+  let $result := tvalib:get-crid($ids)
+  return assert:equal($result, $bdsCrid)
+};
+
+declare %test:case function shouldGetPipsCrid() {
+  let $pipsCrid := "crid://bbc.co.uk/b/6122695"
+  let $ids := <ids>
+                <id type="crid" authority="pips">{$pipsCrid}</id>
+              </ids>
+  let $result := tvalib:get-crid($ids)
+  return assert:equal($result, $pipsCrid)
+};
+
 
 declare %test:case function get-ancestors() {
   <todo></todo>

@@ -13,5 +13,17 @@ declare function rest:get($context as map:map, $params as map:map) as document-n
   let $output-types as map:map? := map:put($context,"output-types","application/xml") 
 
   let $content as element()? := tva:render-content($pid, $cid)
+
+  let $negotiate := if (empty($pid)) then
+                      fn:error((),"RESTAPI-EXTNERR",("400","Bad Request","xml",xdmp:quote(<error>Missing pid parameter</error>)))
+                    else if (empty($cid)) then
+                      fn:error((),"RESTAPI-EXTNERR",("400","Bad Request","xml",xdmp:quote(<error>Missing cid parameter</error>)))
+                    else if (count($content/ProgramDescription/ProgramInformationTable/*) eq 0 and
+                             count($content/ProgramDescription/GroupInformationTable/*) eq 0 and
+                            count($content/ProgramDescription/ProgramLocationTable/*) eq 0) then
+                      fn:error((),"RESTAPI-EXTNERR",("404","Not Found","xml",xdmp:quote(<error>Not found</error>)))
+                    else
+                      () (: OK :)
+
   return document {$content} 
 };
